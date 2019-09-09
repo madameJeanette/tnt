@@ -1,3 +1,8 @@
+### Track&Trello
+
+Tnt is een web applicatie die een overzicht van de development cycle geeft, door de data van het Trello bord van de organisatie in statistieken in een visuele overzichtelijke weergave te zetten. De applicatie verschaft inzicht over de afrondsnelheid van de taken van het Team.
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
