@@ -1,21 +1,54 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 
-export default function Navbar() {
+function Navbar() {
     
     return (
-        <nav style={hdrStyle}>
-            <a style={linkStyleImg} to="/">logo foto</a>
+    <nav>
+        <div  className="navNarrow">
+           <i onClick={burgerToggle} className="fa fa-bars" style={navStyle}></i>
+            <div className="narrowLinks">
+          
+              <a href="#" onClick={burgerToggle} style={linkStyle}>Home </a>
+
+              <a href="#" onClick={burgerToggle} style={linkStyle}> Team</a>
+               
+              <a href="#" onClick={burgerToggle} style={linkStyle}> Leaderboard </a>  
+               
+             
+
+            </div>
+        </div>        
+
+        <div className="navWide">
+            <div style={navStyle}>
+               <a href="#" onClick={burgerToggle} style={linkStyleImg}>logo foto</a>
             
-            <a style={linkStyle} to="/">Home </a>
+                <a href="#" onClick={burgerToggle} style={linkStyle} >Home </a>
+               |   
+                <a href="#" onClick={burgerToggle} style={linkStyle}> Team</a>
              |
-            <a style={linkStyle} to="/leaderboard"> Leaderboard </a>  
-            | 
-            <a style={linkStyle} to="/about"> About</a>
-        </nav>
+                <a href="#" onClick={burgerToggle} style={linkStyle}> Leaderboard </a>  
+            
+             
+            </div>
+        </div>
+     </nav>
+
+        
     )
 }
 
-const hdrStyle = {
+ function burgerToggle() {
+    let linksEl = document.querySelector('.narrowLinks');
+    if (linksEl.style.display === 'block') {
+              linksEl.style.display = 'none';   //toggle the drop-down based on its current CSS display value
+          } else {
+              linksEl.style.display = 'block';
+          }
+  }
+  
+const navStyle = {
     backgroundColor: '#f9f9f9',
     color:'#6f7982',
     padding: '20px',
@@ -26,7 +59,9 @@ const hdrStyle = {
 const linkStyle = {
     color:'#6f7982',
     textDecoration: 'none',
-    textAlign: 'center'
+    textAlign: 'center',
+    padding: '10px'
+    
 }
 
 const linkStyleImg = {
@@ -34,3 +69,5 @@ const linkStyleImg = {
     textDecoration: 'none',
     float: 'left'
 }
+
+export default Navbar;
