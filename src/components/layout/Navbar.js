@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function Header() {
+export default function Navbar() {
     
     return (
-        <header style={hdrStyle}>
+        <nav style={hdrStyle}>
             <a style={linkStyleImg} to="/">logo foto</a>
             
             <a style={linkStyle} to="/">Home </a>
@@ -11,7 +11,7 @@ export default function Header() {
             <a style={linkStyle} to="/leaderboard"> Leaderboard </a>  
             | 
             <a style={linkStyle} to="/about"> About</a>
-        </header>
+        </nav>
     )
 }
 
