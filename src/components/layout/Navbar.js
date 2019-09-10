@@ -1,39 +1,51 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import Team from '../../pages/Team';
+import Leaderboard from '../../pages/Leaderboard';
+import Home from '../../pages/Home'
+
+
 
 function Navbar() {
     
     return (
-    <nav>
-        <div  className="navNarrow">
+    <Router>
+       <div  className="navNarrow">
            <i onClick={burgerToggle} className="fa fa-bars" style={navStyle}></i>
             <div className="narrowLinks">
           
-              <a href="#" onClick={burgerToggle} style={linkStyle}>Home </a>
+              <Link to="/" onClick={burgerToggle} style={linkStyle}>Home </Link>
 
-              <a href="#" onClick={burgerToggle} style={linkStyle}> Team</a>
+              <Link to="/Team" onClick={burgerToggle} style={linkStyle}> Team</Link>
                
-              <a href="#" onClick={burgerToggle} style={linkStyle}> Leaderboard </a>  
+              <Link to="/Leaderboard" onClick={burgerToggle} style={linkStyle}> Leaderboard </Link>  
                
              
 
             </div>
-        </div>        
+        </div>       
 
         <div className="navWide">
             <div style={navStyle}>
-               <a href="#" onClick={burgerToggle} style={linkStyleImg}>logo foto</a>
+               <Link to="/" onClick={burgerToggle} style={linkStyleImg}>logo foto</Link>
             
-                <a href="#" onClick={burgerToggle} style={linkStyle} >Home </a>
+                <Link to="/" onClick={burgerToggle} style={linkStyle} >Home </Link>
                |   
-                <a href="#" onClick={burgerToggle} style={linkStyle}> Team</a>
-             |
-                <a href="#" onClick={burgerToggle} style={linkStyle}> Leaderboard </a>  
+                <Link to ="/Team" onClick={burgerToggle} style={linkStyle}> Team</Link>
+               |
+                <Link to="/Leaderboard" onClick={burgerToggle} style={linkStyle}> Leaderboard </Link>  
             
              
+                <Switch>
+                    <Route exact path="/" component={Home} />
+                    <Route path="/Leaderboard" component={Leaderboard} />
+                    <Route path="/Team" component={Team} />
+                    {/* when none of the above match, <NoMatch> will be rendered */}
+                    {/* <Route component={NoMatch} /> */}
+                </Switch>
             </div>
         </div>
-     </nav>
+    </Router>
 
         
     )
@@ -69,5 +81,7 @@ const linkStyleImg = {
     textDecoration: 'none',
     float: 'left'
 }
+
+
 
 export default Navbar;
