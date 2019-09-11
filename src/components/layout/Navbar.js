@@ -14,14 +14,11 @@ function Navbar() {
            <i onClick={burgerToggle} className="fa fa-bars" style={navStyle}></i>
             <div className="narrowLinks">
           
-              <Link to="/" onClick={burgerToggle} style={linkStyle}>Home </Link>
+              <Link to="/"  style={linkStyle}>Home </Link>
 
-              <Link to="/Team" onClick={burgerToggle} style={linkStyle}> Team</Link>
+              <Link to="/Team" style={linkStyle}> Team</Link>
                
-              <Link to="/Leaderboard" onClick={burgerToggle} style={linkStyle}> Leaderboard </Link>  
-               
-             
-
+              <Link to="/Leaderboard" style={linkStyle}> Leaderboard </Link>  
             </div>
         </div>       
 
@@ -40,8 +37,6 @@ function Navbar() {
                     <Route exact path="/" component={Home} />
                     <Route path="/Leaderboard" component={Leaderboard} />
                     <Route path="/Team" component={Team} />
-                    {/* when none of the above match, <NoMatch> will be rendered */}
-                    {/* <Route component={NoMatch} /> */}
                 </Switch>
             </div>
         </div>
