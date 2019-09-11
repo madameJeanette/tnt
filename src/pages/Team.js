@@ -3,7 +3,7 @@ import React from 'react';
 function Team() {
     return (
       <div className="Team">
-        <h1>Ik ben de Team pagina</h1>
+        <h1>Ik ben de Team paginaaaaaaaa</h1>
       </div>
     );
   
