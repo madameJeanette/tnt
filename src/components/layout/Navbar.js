@@ -9,8 +9,7 @@ import Home from '../../pages/Home'
 function Navbar() {
     
     return (
-        <Router>
-            <div>
+    <Router>
        <div  className="navNarrow">
            <i onClick={burgerToggle} className="fa fa-bars" style={navStyle}></i>
             <div className="narrowLinks">
@@ -33,7 +32,7 @@ function Navbar() {
                |
                 <Link to="/Leaderboard" onClick={burgerToggle} style={linkStyle}> Leaderboard </Link>  
                 </div>
-             </div>
+             
                 <Switch>
                     <Route exact path="/" component={Home} />
                     <Route path="/Leaderboard" component={Leaderboard} />

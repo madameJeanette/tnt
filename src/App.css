@@ -5,3 +5,37 @@
 .App-link {
   color: #21a2dc;
 }
+
+
+
+.navWide {
+  display: none;
+}
+
+i {
+      float: left;
+      padding: 20px;
+   
+      
+  }
+
+  .narrowLinks {
+      display: none;
+  }
+
+ .narrowLinks a {
+          display: block;
+          float: left;
+          clear: left;
+  }
+  
+@media (min-width: 480px) {
+      .navWide {
+          display: block;
+      }
+
+      .navNarrow {
+          display: none;
+      }
+  
+}
