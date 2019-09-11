@@ -31,14 +31,14 @@ function Navbar() {
                 <Link to ="/Team" onClick={burgerToggle} style={linkStyle}> Team</Link>
                |
                 <Link to="/Leaderboard" onClick={burgerToggle} style={linkStyle}> Leaderboard </Link>  
-            
+                </div>
              
                 <Switch>
                     <Route exact path="/" component={Home} />
                     <Route path="/Leaderboard" component={Leaderboard} />
                     <Route path="/Team" component={Team} />
                 </Switch>
-            </div>
+            
         </div>
     </Router>
 
