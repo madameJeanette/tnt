@@ -11,20 +11,24 @@ function Navbar() {
     return (
     <Router>
        <div  className="navNarrow">
-           <i onClick={burgerToggle} className="fa fa-bars" style={navStyle}></i>
-            <div className="narrowLinks">
-          
-              <Link to="/"  style={linkStyle}>Home </Link>
+           <div  style={navStyle}>
+           <Link to="/" onClick={burgerToggle} style={linkStyleImg}><img src='src\Logo.jpg' alt= 'logo TeqPlay' /></Link>
+           <i onClick={burgerToggle} className="fa fa-bars"></i>
+                  
+                <div className="narrowLinks">
+            
+                <Link to="/"  style={linkStyle}>Home </Link>
 
-              <Link to="/Team" style={linkStyle}> Team</Link>
-               
-              <Link to="/Leaderboard" style={linkStyle}> Leaderboard </Link>  
+                <Link to="/Team" style={linkStyle}> Team</Link>
+                
+                <Link to="/Leaderboard" style={linkStyle}> Leaderboard </Link>  
+                </div>
             </div>
         </div>       
 
         <div className="navWide">
             <div style={navStyle}>
-               <Link to="/" onClick={burgerToggle} style={linkStyleImg}>logo foto</Link>
+               <Link to="/" onClick={burgerToggle} style={linkStyleImg}><img src='src\Logo.jpg' alt= 'logo TeqPlay' /></Link>
             
                 <Link to="/" onClick={burgerToggle} style={linkStyle} >Home </Link>
                |   
@@ -72,6 +76,7 @@ const linkStyle = {
 }
 
 const linkStyleImg = {
+    
     color:'#6f7982',
     textDecoration: 'none',
     float: 'left'

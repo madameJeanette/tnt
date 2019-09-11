@@ -5,7 +5,7 @@ function Leaderboard() {
     return (
       <div className="Leaderboard">
      
-               <h1>Ik ben de Leaderboard pagina</h1>
+               <h4>[Under construction]</h4>
       </div>
     );
   
