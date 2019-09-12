@@ -4,7 +4,7 @@ export default function Card() {
     return (
         <div className='profileCard' style={profileCardStyle}>
            <h2>This is a profile card</h2> 
-           <img src="https://img.pngio.com/parent-directory-avatar-2png-avatar-png-256_256.png"></img>
+           <img src="https://img.pngio.com/parent-directory-avatar-2png-avatar-png-256_256.png" alt= "Profile Card"></img>
            <h3>name</h3>
            <p>jobDesc</p>
            
