@@ -22,6 +22,8 @@ function Navbar() {
                     <Link to="/Team" onClick={burgerToggle} style={linkStyle}> Team</Link>
                     |
                     <Link to="/Leaderboard" onClick={burgerToggle} style={linkStyle}> Leaderboard </Link>
+                    |
+                    <Link to="/Settings" onClick={burgerToggle} style={linkStyle}> Settings </Link>
                 </div>
                 <div className="blueRect" style={BlueRect}>
 
