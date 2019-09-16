@@ -26,8 +26,8 @@ export class StatsApi extends Component {
         }
       }
     componentDidMount() {
-                axios.get('http://trelloextension.eu-west-1.elasticbeanstalk.com/board/qDAFPals/teamstatistics', {
-                        headers: {
+                axios.get('http://localhost:8080/board/qDAFPals/teamstatistics', {
+                        params: {
                             'startDate': '2019-09-10',
                             'endDate': '2019-09-22',
                         
@@ -55,7 +55,7 @@ export class StatsApi extends Component {
             // 'responseType': 'json'
         }
               
-        axios.get('http://trelloextension.eu-west-1.elasticbeanstalk.com/board/qDAFPals/burndownchartinfo', {
+        axios.get('http://localhost:8080/board/qDAFPals/burndownchartinfo', {
             headers: {
                 'startDate': '2019-09-10',
                 'endDate': '2019-09-22',
@@ -66,7 +66,7 @@ export class StatsApi extends Component {
        const chartInfo = res.data;
        this.setState({ chartInfo });
         })
-                                axios.get('http://trelloextension.eu-west-1.elasticbeanstalk.com/board/qDAFPals/leaderboard', { 
+                                axios.get('http://localhost:8080/board/qDAFPals/leaderboard', {
                                     headers: {
                                         'key': '62f0297bf821e374ae28a1fbab5ef9fb',
                         'token': 'dd1d9766b7c5be875fe3e73c590bf3d53237f383b719311182c1e76ba9ce0da5',
