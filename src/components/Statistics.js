@@ -1,10 +1,10 @@
 import React from 'react'
 import {BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
 const data = [
-    {name: 'Todo', move: 0, add: 5},
-    {name: 'Completed', move: 10, add: 3},
-    {name: 'Gandalf', move: 3, add: 6},
-    {name: 'Testing', move: 7, add: 9},
+    { name: 'Todo', this_week: 0, last_week: 5 },
+    { name: 'Completed', this_week: 10, last_week: 3 },
+    { name: 'Gandalf', this_week: 3, last_week: 6 },
+    { name: 'Testing', this_week: 7, last_week: 9},
 ];
 function Statistics() {
     return (
@@ -15,8 +15,8 @@ function Statistics() {
    <YAxis/>
    <Tooltip/>
    <Legend />
-   <Bar dataKey="move" fill="#8884d8" />
-   <Bar dataKey="add" fill="#82ca9d" />
+   <Bar dataKey="this_week" fill="#8884d8" />
+   <Bar dataKey="last_week" fill="#82ca9d" />
   </BarChart>
 
     )
