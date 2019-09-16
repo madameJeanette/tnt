@@ -15,7 +15,18 @@ class SyncSettings extends Component {
                     reviewingListId: "The gandalf ID"
                 }
             ]
-        }
+        };
+
+        this.handleBoardChange = this.handleBoardChange.bind(this);
+    }
+
+    handleBoardChange(event, index) {
+        const { key, value } = event.target;
+        var boards = [...this.state.boards];
+        boards[index] = {
+            [key]: value
+        };
+        this.setState({boards});
     }
 
     render() {
@@ -30,20 +41,23 @@ class SyncSettings extends Component {
                 <label htmlFor="key">Trello OAuth Token</label>
                 <input type="text" className="form-control" name="key" value={token} onChange={(e) => this.setState({ token: e.target.value})} />
 
-                {boards.map((value, key) => (
+                {boards.map((value, index) => (
                     <div className="sync-settings-board">
 
                         <label htmlFor="key">Board ID</label>
-                        <input type="text" className="form-control" name="key" value={token} onChange={(e) => this.setState({ token : e.target.value})} />
+                        <input type="text" className="form-control" name="key" value={value.id} onChange={(e) => this.handleBoardChange(e, index)} />
 
-                        <label htmlFor="key">Done list Id</label>
-                        <input type="text" className="form-control" name="key" value={token} onChange={(e) => this.setState({ token: e.target.value})} />
+                        <label htmlFor="key">Done list ID</label>
+                        <input type="text" className="form-control" name="key" value={value.doneListId} onChange={(e) => this.handleBoardChange(e, index)} />
 
-                        <label htmlFor="key">Trello OAuth Token</label>
-                        <input type="text" className="form-control" name="key" value={token} onChange={(e) => this.setState({ token: e.target.value})} />
+                        <label htmlFor="key">Doing list ID</label>
+                        <input type="text" className="form-control" name="key" value={value.doingListId} onChange={(e) => this.handleBoardChange(e, index)} />
 
-                        <label htmlFor="key">Trello OAuth Token</label>
-                        <input type="text" className="form-control" name="key" value={token} onChange={(e) => this.setState({ token: e.target.value})} />
+                        <label htmlFor="key">Testing list ID</label>
+                        <input type="text" className="form-control" name="key" value={value.testingListId} onChange={(e) => this.handleBoardChange(e, index)} />
+
+                        <label htmlFor="key">Reviewing list ID</label>
+                        <input type="text" className="form-control" name="key" value={value.reviewingListId} onChange={(e) => this.handleBoardChange(e, index)} />
                     </div>
                 ))}
 
