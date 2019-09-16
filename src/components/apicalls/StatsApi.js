@@ -58,9 +58,7 @@ export class StatsApi extends Component {
         }
    })
         .then(res => {
-        return console.log(res.data)
-       const chartInfo = res.data;
-       this.setState({ chartInfo });
+        return res.data
         })
                                 axios.get('http://trelloextension.eu-west-1.elasticbeanstalk.com/board/qDAFPals/leaderboard', {
                                     params: {
