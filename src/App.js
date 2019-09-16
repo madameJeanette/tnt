@@ -9,6 +9,7 @@ import {BrowserRouter as Router} from "react-router-dom";
 import Settings from "./pages/Settings";
 
 
+
 function App() {
     return (
         <div className="App">
@@ -21,7 +22,7 @@ function App() {
             </Router>
         </div>
     );
-
+    
 }
 
 export default App;
