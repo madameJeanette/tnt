@@ -1,13 +1,19 @@
-import React from 'react'
+import React, {useState , useEffect} from 'react'
+import Axios from 'axios';
+
+
 
 export default function Card() {
+    const [tableContent, setTableContent] = useState([])
+    useEffect(() => {
+        Axios.get().then()
+    })
     return (
         <div className='profileCard' style={profileCardStyle}>
            <h2>This is a profile card</h2> 
-           <img src="https://img.pngio.com/parent-directory-avatar-2png-avatar-png-256_256.png" alt= "Profile Card"></img>
-           <h3>name</h3>
-           <p>jobDesc</p>
-           
+           <img src="https://img.pngio.com/parent-directory-avatar-2png-avatar-png-256_256.png" alt="" />
+           <h3>Name</h3>,
+           <p>jobdesc</p>
         </div>
     )
 }
