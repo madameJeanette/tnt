@@ -1,17 +1,19 @@
 import React from 'react';
-// import { useQuery } from 'react-fetching-library';
+// Data container for burndown
 import {fetchDonePoints} from '../apicalls/actions/fetchDonePoints'
-import DonePoints from './DonePoints'
 import { useSuspenseQuery } from 'react-fetching-library';
+import BurnDown from '../BurnDown';
 
 
-export const DonePointsContainer = () => {
+export const BurnDownContainer = () => {
   const { loading, payload, error, query} = useSuspenseQuery(fetchDonePoints);
  
   // console.log(loading, payload, error, query);
-  return <DonePoints loading={loading} error={error} items={payload} onReload={query}/>;
+  return <BurnDown loading={loading} error={error} items={payload} onReload={query}/>;
 
 };
 
-export default DonePointsContainer;
+export default BurnDownContainer;
 
+
+//query data and send to BurnDown
