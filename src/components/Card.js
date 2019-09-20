@@ -11,8 +11,8 @@ export default function Card() {
     return (
         <div className='profileCard' style={profileCardStyle}>
            <h2>This is a profile card</h2> 
-           <img src="https://img.pngio.com/parent-directory-avatar-2png-avatar-png-256_256.png" alt="" />
-           <h3>Name</h3>,
+           <img src="https://img.pngio.com/parent-directory-avatar-2png-avatar-png-256_256.png" alt="profile pic" />
+           <h3>Name</h3>
            <p>jobdesc</p>
         </div>
     )
