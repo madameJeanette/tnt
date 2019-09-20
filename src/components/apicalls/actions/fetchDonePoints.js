@@ -1,7 +1,7 @@
 
 export const fetchDonePoints = {
   method: 'GET',
-  endpoint: '/burndownchartinfo' 
+  endpoint: '/board/qDAFPals/burndownchartinfo' 
 }
 
 export default fetchDonePoints
