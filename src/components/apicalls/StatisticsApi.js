@@ -4,7 +4,7 @@ import axios from 'axios'
 function componentDidMount() {
     axios.get('http://trelloextension.eu-west-1.elasticbeanstalk.com/board/qDAFPals/teamstatistics', {
         params: {
-            'today': '2019-09-23',
+            
             
         }
     })
