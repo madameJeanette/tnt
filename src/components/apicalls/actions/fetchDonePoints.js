@@ -1,6 +1,6 @@
 var today = new Date()
 var plusSeven = new Date(today.setDate(today.getDate() + 7));
-var minusSeven = new Date(today.setDate(today.getDate() - 31));
+var minusSeven = new Date(today.setDate(today.getDate() - 7));
 
 var formatLastWeek = minusSeven.toISOString().split('T', 1)[0]
 var formatNextWeek = plusSeven.toISOString().split('T', 1)[0]
