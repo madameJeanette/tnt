@@ -1,11 +1,11 @@
 import React from 'react';
-import Statistics from '../components/Statistics'
+import BurnDownContainer from '../components/donePoints/BurnDownContainer';
 
 function Team() {
     return (
-      <div className="Team">
-        <h1>Ik ben de Team pagina</h1>
-        <Statistics />
+      <div className="Team"> 
+      {/* Pass in data for container component. */}
+        <BurnDownContainer /> 
       </div>
     );
   
