@@ -4,8 +4,8 @@ import axios from 'axios'
 function componentDidMount() {
     axios.get('http://trelloextension.eu-west-1.elasticbeanstalk.com/board/qDAFPals/teamstatistics', {
         params: {
-            'startDate': '2019-09-10',
-            'endDate': '2019-09-22',
+            'today': '2019-09-23',
+            
         }
     })
         .then(res => {
