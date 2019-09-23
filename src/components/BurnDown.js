@@ -5,6 +5,11 @@ import {
 
 
 const BurnDown = ({ loading, error, items, onReload }) => {
+
+  items.items.forEach(item => {
+    item.actualDonePoints = item.totalPoint - item.totalDonePoint
+  });
+
     // pass in data from BurnDownContainer
 console.log(items)
   return ( 
@@ -15,17 +20,17 @@ console.log(items)
      <LineChart
       width={1000}
       height={500}
-      data= {items} //pass in data items from burndowncontainer
+      data= {items.items} //pass in data items from burndowncontainer
       margin={{
         top: 20, right: 50, left: 20, bottom: 20,
       }}
     >
       <CartesianGrid strokeDasharray="3 3" />
-      <XAxis dataKey="totalHoursSpend" />
+      <XAxis dataKey="date" />
       <YAxis />
       <Tooltip />
       <Legend />
-      <Line type="monotone" dataKey="totalDonePoint" stroke="#32f3c9" activeDot={{ r: 3 }} /> 
+      <Line type="monotone" dataKey="actualDonePoints" stroke="#32f3c9" activeDot={{ r: 3 }} /> 
       {/* Use data key from items */}
      
      
