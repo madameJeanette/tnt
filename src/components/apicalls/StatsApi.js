@@ -56,7 +56,7 @@ export class StatsApi extends Component {
         }
               
         axios.get('http://localhost:8080/board/qDAFPals/burndownchartinfo', {
-            headers: {
+            params: {
                 'startDate': '2019-09-10',
                 'endDate': '2019-09-22',
         }
@@ -67,7 +67,7 @@ export class StatsApi extends Component {
        this.setState({ chartInfo });
         })
                                 axios.get('http://localhost:8080/board/qDAFPals/leaderboard', {
-                                    headers: {
+                                    params: {
                                         'key': '62f0297bf821e374ae28a1fbab5ef9fb',
                         'token': 'dd1d9766b7c5be875fe3e73c590bf3d53237f383b719311182c1e76ba9ce0da5',
                         'doingListId': '5411bfbbc1a47d1d609a572a',
