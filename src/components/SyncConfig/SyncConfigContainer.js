@@ -5,7 +5,7 @@ import {BACKEND_URL} from "../../constants";
 import {SaveSyncConfig} from "./SaveSyncConfig";
 
 
-const getSyncConfigAction: Action = {
+const getSyncConfigAction = {
     method: "GET",
     endpoint: BACKEND_URL + "/config/getSyncInfo",
     headers:
