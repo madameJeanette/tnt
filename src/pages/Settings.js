@@ -1,12 +1,13 @@
 import React from 'react';
-import SyncSettings from "../components/SyncSettings";
+import {Container} from "semantic-ui-react";
+import {SyncConfigContainer} from "../components/SyncConfig/SyncConfigContainer";
 
 function Settings() {
     return (
-        <div className="settings">
+        <Container  className="settings">
             <h1>Settings</h1>
-            <SyncSettings />
-        </div>
+            <SyncConfigContainer />
+        </Container >
     );
 }
 
