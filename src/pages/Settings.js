@@ -1,11 +1,11 @@
 import React from 'react';
-import SyncSettings from "../components/SyncSettings";
+import {SyncConfigContainer} from "../components/SyncConfig/SyncConfigContainer";
 
 function Settings() {
     return (
         <div className="settings">
             <h1>Settings</h1>
-            <SyncSettings />
+            <SyncConfigContainer />
         </div>
     );
 }
