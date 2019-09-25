@@ -7,8 +7,8 @@ import {
 const BurnDown = ({ loading, error, items, onReload }) => {
 
   items.items.forEach(item => {
-    
-    item.actualDonePoints = item.totalPoint - item.totalDonePoint;
+    item.ScrumPoints = item.totalDonePoint;
+    item.BurnDownPoints = item.totalPoint - item.totalDonePoint;
     item.readableDate = new Date(item.date).toUTCString().split('2019', 1)[0];
     console.log(item.readableDate)
   });
@@ -19,7 +19,7 @@ const BurnDown = ({ loading, error, items, onReload }) => {
     
       //  linechart build
     <div> 
-       <h3 >Burndown tasks</h3>
+       <h3 >Tasks</h3>
      
      <LineChart
       width={700}
@@ -34,8 +34,8 @@ const BurnDown = ({ loading, error, items, onReload }) => {
       <YAxis />
       <Tooltip />
       <Legend />
-      <Line type="monotone" dataKey="actualDonePoints" stroke="#1289A7" activeDot={{ r: 3 }} />
-      <Line type="monotone" dataKey="totalDonePoint" stroke="#ED4C67" activeDot={{ r: 3 }} /> 
+      <Line type="monotone" dataKey="BurnDownPoints" stroke="#1289A7" activeDot={{ r: 3 }} />
+      <Line type="monotone" dataKey="ScrumPoints" stroke="#ED4C67" activeDot={{ r: 3 }} /> 
       {/* Use data key from items */}    
     </LineChart>
     </div>
