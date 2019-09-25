@@ -1,11 +1,15 @@
 import React from 'react';
-import BurnDownContainer from '../components/donePoints/BurnDownContainer';
+
+import DateRange from '../components/DateRange'
 
 function Team() {
+  
+
     return (
       <div className="Team"> 
       {/* Pass in data for container component. */}
-        <BurnDownContainer /> 
+        {/* <BurnDownContainer />  */}
+        <DateRange />
       </div>
     );
   
