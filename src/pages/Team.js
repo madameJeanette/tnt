@@ -1,15 +1,15 @@
 import React from 'react';
-import BurnDownContainer from '../components/donePoints/BurnDownContainer';
-import DailyStandUpContainer from '../components/dailyStandUp/DailyStandUpContainer'
-import DailyCardContainer from '../components/dailyStandUp/DailyCardContainer'
+
+import DateRange from '../components/DateRange'
 
 function Team() {
+  
+
     return (
       <div className="Team"> 
-        {/* Pass in data for container component. */}
-        <DailyStandUpContainer />
-        <DailyCardContainer />
-        <BurnDownContainer /> 
+      {/* Pass in data for container component. */}
+        {/* <BurnDownContainer />  */}
+        <DateRange />
       </div>
     );
   
