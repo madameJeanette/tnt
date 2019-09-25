@@ -17,7 +17,7 @@ const BurnDown = ({ loading, error, items, onReload }) => {
   return ( 
     
       //  linechart build
-    <div style={lineChartStyle}> 
+    <div> 
        <h3 >Burndown tasks</h3>
      
      <LineChart
@@ -42,10 +42,6 @@ const BurnDown = ({ loading, error, items, onReload }) => {
 
 }
 
-const  lineChartStyle = {
-  float: 'right',
-  margin: '10'
- 
-}
+
 
 export default BurnDown;
