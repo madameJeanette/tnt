@@ -11,7 +11,9 @@ function Navbar() {
                 <div className="narrowLinks">
                     <Link to="/" style={linkStyle}> Personal </Link>
                     <Link to="/Team" style={linkStyle}> Team</Link>
+                    <Link to="/DailyStandUp" style={linkStyle}> StandUp </Link>
                     <Link to="/Leaderboard" style={linkStyle}> Leaderboard </Link>
+                    <Link to="/Settings" style={linkStyle}> Settings </Link>
                 </div>
             </div>
 
@@ -21,6 +23,8 @@ function Navbar() {
                     <Link to="/" onClick={burgerToggle} style={linkStyle}> Personal </Link>
                     |
                     <Link to="/Team" onClick={burgerToggle} style={linkStyle}> Team </Link>
+                    |
+                    <Link to="/DailyStandUp" onClick={burgerToggle} style={linkStyle}> StandUp </Link>
                     |
                     <Link to="/Leaderboard" onClick={burgerToggle} style={linkStyle}> Leaderboard </Link>
                     |
