@@ -9,7 +9,7 @@ function Navbar() {
             <div className="navNarrow">
                 <i onClick={burgerToggle} className="fa fa-bars" style={navStyle}/>
                 <div className="narrowLinks">
-                    <Link to="/" style={linkStyle}>Home </Link>
+                    <Link to="/" style={linkStyle}> Personal </Link>
                     <Link to="/Team" style={linkStyle}> Team</Link>
                     <Link to="/Leaderboard" style={linkStyle}> Leaderboard </Link>
                 </div>
@@ -17,9 +17,10 @@ function Navbar() {
 
             <div className="navWide">
                 <div style={navStyle}>
-                    <Link to="/" onClick={burgerToggle} style={linkStyleImg}>logo foto</Link>
-                    <Link to="/" onClick={burgerToggle} style={linkStyle}>Home </Link>
-                    <Link to="/Team" onClick={burgerToggle} style={linkStyle}> Team</Link>
+                   <Link to="/" onClick={burgerToggle} ><img src="Logo.jpg" style={linkStyleImg}  /></Link>
+                    <Link to="/" onClick={burgerToggle} style={linkStyle}> Personal </Link>
+                    |
+                    <Link to="/Team" onClick={burgerToggle} style={linkStyle}> Team </Link>
                     |
                     <Link to="/Leaderboard" onClick={burgerToggle} style={linkStyle}> Leaderboard </Link>
                     |
@@ -67,6 +68,7 @@ const linkStyle = {
 }
 
 const linkStyleImg = {
+    
     color: '#6f7982',
     textDecoration: 'none',
     float: 'left'
