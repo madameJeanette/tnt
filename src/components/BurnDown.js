@@ -7,6 +7,7 @@ import {
 const BurnDown = ({ loading, error, items, onReload }) => {
 
   items.items.forEach(item => {
+    
     item.actualDonePoints = item.totalPoint - item.totalDonePoint;
     item.readableDate = new Date(item.date).toUTCString().split('2019', 1)[0];
     console.log(item.readableDate)
@@ -33,7 +34,8 @@ const BurnDown = ({ loading, error, items, onReload }) => {
       <YAxis />
       <Tooltip />
       <Legend />
-      <Line type="monotone" dataKey="actualDonePoints" stroke="#32f3c9" activeDot={{ r: 3 }} /> 
+      <Line type="monotone" dataKey="actualDonePoints" stroke="#1289A7" activeDot={{ r: 3 }} />
+      <Line type="monotone" dataKey="totalDonePoint" stroke="#ED4C67" activeDot={{ r: 3 }} /> 
       {/* Use data key from items */}    
     </LineChart>
     </div>
