@@ -19,10 +19,7 @@ export function DateRange() {
       };
     return (
       <div style={lineChartStyle}>
-         <BurnDownContainer 
-          endDate={endDateValue}
-          startDate={startDateValue}
-           />
+       
         <DatePicker
           selected={startDateValue}
           onChange={date => setStartDate(date)}
@@ -32,7 +29,10 @@ export function DateRange() {
           filterDate={isWeekday}
           placeholderText="Select a weekday"
         />
-        
+          <BurnDownContainer 
+          endDate={endDateValue}
+          startDate={startDateValue}
+           />
         
           
       
