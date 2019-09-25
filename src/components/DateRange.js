@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import DatePicker from "react-datepicker";
-import BurnDownContainer from '../components/donePoints/BurnDownContainer';
- 
+import BurnDownContainer from '../components/donePoints/BurnDownContainer'; 
 import "react-datepicker/dist/react-datepicker.css";
 
 Date.prototype.addDays = function(days) {
@@ -11,6 +10,7 @@ Date.prototype.addDays = function(days) {
 }
 
 export function DateRange() {
+
     const [startDateValue, setStartDate] = useState(new Date());
     const [endDateValue] = useState(new Date().addDays(14));
       const isWeekday = date => {
@@ -19,7 +19,6 @@ export function DateRange() {
       };
     return (
       <div style={lineChartStyle}>
-       
         <DatePicker
           selected={startDateValue}
           onChange={date => setStartDate(date)}
@@ -29,22 +28,16 @@ export function DateRange() {
           filterDate={isWeekday}
           placeholderText="Select a weekday"
         />
-          <BurnDownContainer 
+        <BurnDownContainer 
           endDate={endDateValue}
           startDate={startDateValue}
-           />
-        
-          
-      
+        />
       </div>
-    );
-    
+    ); 
   }; 
-
   const  lineChartStyle = {
     float: 'right',
     margin: '10'
-   
   }
 
   export default DateRange

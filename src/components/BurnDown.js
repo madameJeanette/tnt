@@ -3,8 +3,7 @@ import {
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
 } from 'recharts';
 
-
-const BurnDown = ({ loading, error, items, onReload }) => {
+const BurnDown = ({ items }) => {
 
   items.items.forEach(item => {
     item.TotalCards = item.totalItems
@@ -41,11 +40,6 @@ const BurnDown = ({ loading, error, items, onReload }) => {
       {/* Use data key from items */}    
     </LineChart>
     </div>
-  
- );
-
+   );
 }
-
-
-
 export default BurnDown;
