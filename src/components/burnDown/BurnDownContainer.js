@@ -21,6 +21,7 @@ export const BurnDownContainer = (startDate) => {
   return (
     <div>
       <BurnDown loading={loading} error={error} items={payload} onReload={query}/>  
+   
     </div>
    
   );
