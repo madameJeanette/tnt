@@ -1,11 +1,9 @@
 import React from 'react';
-
 import DateRange from '../components/DateRange'
 
 function Team() {
-  
-
-    return (
+ 
+  return (
       <div className="Team"> 
         <h3>Team page</h3>
         <DateRange />
