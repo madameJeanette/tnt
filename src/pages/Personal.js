@@ -1,9 +1,9 @@
 import React from 'react';
 import Card from "../components/Card";
 
-function Home() {
+function Personal() {
     return (
-      <div className="Home">
+      <div className="Personal">
        
          <Card />
 
@@ -13,4 +13,4 @@ function Home() {
   
   }
   
-  export default Home;
+  export default Personal;

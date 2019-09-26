@@ -7,9 +7,9 @@ function Team() {
 
     return (
       <div className="Team"> 
-      {/* Pass in data for container component. */}
-        {/* <BurnDownContainer />  */}
+        <h3>Team page</h3>
         <DateRange />
+        
       </div>
     );
   
