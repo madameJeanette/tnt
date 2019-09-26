@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSuspenseQuery } from 'react-fetching-library';
 import BurnDown from '../BurnDown';
+
 export const fetchDonePoints = (dates) => {  //fetch with dates
 
   return {

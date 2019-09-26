@@ -4,13 +4,13 @@ import {
 } from 'recharts';
 
 const BurnDown = ({ items }) => {
-
+  
   items.items.forEach(item => {
     item.TotalCards = item.totalItems
     item.ScrumPoints = item.totalDonePoint;
     item.BurnDownPoints = item.totalPoint - item.totalDonePoint;
     item.readableDate = new Date(item.date).toUTCString().split('2019', 1)[0];
-    console.log(item.readableDate)
+    
   });
   
     // pass in data from BurnDownContainer

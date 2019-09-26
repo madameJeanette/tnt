@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import DatePicker from "react-datepicker";
-import BurnDownContainer from '../components/donePoints/BurnDownContainer'; 
+import BurnDownContainer from './burnDown/BurnDownContainer'; 
 import "react-datepicker/dist/react-datepicker.css";
 
 Date.prototype.addDays = function(days) {
