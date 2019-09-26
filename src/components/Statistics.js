@@ -17,7 +17,7 @@ const Statistics = ({ loading, error, items, onReload }) => {
 
     items.forEach(item => {
         console.log(
-        item.day = item.date,
+        item.day = new Date(item.date).toUTCString().split('2019', 1)[0],
         item.toDo = item.totalDoing,
         item.done = item.totalDone,
         item.review = item.totalReviewing,
@@ -40,16 +40,18 @@ const Statistics = ({ loading, error, items, onReload }) => {
     return (
         <div>
             {/* BarChart is the output for my data from the api */}
-        <BarChart width={600} height={300} data={data}
+        <BarChart width={600} height={300} data={items}
                   margin={{top: 5, right: 30, left: 20, bottom: 5}}>
 
-            <CartesianGrid strokeDasharray="3 3"/>
-            <XAxis dataKey="name"/>
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="day" />
             <YAxis/>
             <Tooltip/>
             <Legend />
-            <Bar dataKey='today' fill="#8884d8" />
-            <Bar dataKey='yesterday' fill="#82ca9d" />
+            <Bar dataKey="toDo" fill="#8884d8" />
+            <Bar dataKey="done" fill="#82ca9d" />
+            <Bar dataKey="review" fill="#82ca9d" />
+            <Bar dataKey="testing" fill="#82ca9d" />
         </BarChart>
 {/*             
             <BarChart width={600} height={300} data={items}

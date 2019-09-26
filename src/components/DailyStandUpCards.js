@@ -2,34 +2,53 @@ import React from 'react'
 import { Card, Icon } from 'semantic-ui-react'
 
 
-
-const DailyStandUpCards = ({ loading, error, items, onReload }) => {
-    items.forEach(item => {
-        console.log(item)   
-        item.labels.forEach(label => {
-             console.log(label)
-        })
-        item.members.forEach(member => {
-            console.log(member)
-        })
-     })
-    console.log(items)
+const CardList = (props) => {
     return (
         <Card>
-            
-                
-
-                        <Card.Content header={items[94].id} />,
-                        <Card.Content description={items[94].name} />
-                        <Card.Content extra>
-                            <Icon name='user' />{items[94].members[0].fullName}
-                        </Card.Content>
-                        <Card.Content extra>
-                <Icon name='user' />
-                        </Card.Content>      
-            
-            </Card>
+            <Card.Content
+                header={props.Header}
+                description={props.Description}
+                meta={props.Label}
+            />
+        </Card>
     )
+}
+
+const DailyStandUpCards = ({ loading, error, items, onReload }) => {
+
+
+    // items.forEach(item => {
+    //     console.log(item.name)
+    //     item.title = item.name
+    //     item.labels.forEach(label => {
+    //         console.log(label)
+        
+    //     })
+    //     item.members.forEach(member => {
+    //         console.log(member)
+    //     })
+
+    // })
+    const Carditems = items.map((item) =>
+        item.members.map((member) =>
+            item.labels.map((label)=>
+                <CardList key={item.id} Header={item.name} MemberId={member.id} Description={member.fullName} LabelId={label.id}Label={label.name} />
+    )))
+    
+    items.map((item) => {
+        item.members.map((member) => console.log(member))
+        
+        //console.log(item.member)
+    })
+    
+    console.log(items)
+    return(
+        <div>
+           {Carditems}
+        </div>
+    )
+    
+   
 }
 
 export default  DailyStandUpCards
