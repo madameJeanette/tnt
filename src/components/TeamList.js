@@ -1,14 +1,18 @@
 import React from 'react'
 
-const TeamList = ({ size }) => {
+const TeamList = ({ items }) => {
 
     // items.items.forEach(item => {
     //  item.
-      console.log(size)
+      console.log(items)
     // });
     return (
-        <div>
-           <h4> {size} </h4>
+      <div>
+        {
+          items.map((member) =>
+            <h4 key={member.id}>{member.fullName}</h4>
+          )
+        }
         </div>
     )
 }
