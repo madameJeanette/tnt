@@ -25,6 +25,10 @@ h1 {
 h2 {
   color: $colour-highlight2;
 }
+
+h3, h4, h5, p {
+  color: $text-color;
+}
 hr {
   color: $colour-highlight1
 }
