@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react';
 import Navbar from './components/layout/Navbar'
-import './App.css';
+import './App.scss';
 import { ClientContextProvider } from 'react-fetching-library';
 import { Client } from './components/apicalls/Client';
 

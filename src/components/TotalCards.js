@@ -3,12 +3,10 @@ import {
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
 } from 'recharts';
 
-const BurnDown = ({ items }) => {
+const TotalCards = ({ items }) => {
   
   items.items.forEach(item => {
-    
-    item.ScrumPoints = item.totalDonePoint;
-    item.BurnDownPoints = item.totalPoint - item.totalDonePoint;
+    item.TotalCards = item.totalItems
     item.readableDate = new Date(item.date).toUTCString().split('2019', 1)[0];
     
   });
@@ -18,9 +16,7 @@ const BurnDown = ({ items }) => {
   return ( 
     
       //  linechart build
-    <div> 
-       <h3 >Tasks</h3>
-     
+    <div classtotalCards>      
      <LineChart
       width={1000}
       height={600}
@@ -34,12 +30,10 @@ const BurnDown = ({ items }) => {
       <YAxis />
       <Tooltip />
       <Legend />
-      <Line type="monotone" dataKey="BurnDownPoints" stroke="#ff9ff3" activeDot={{ r: 3 }} />
-      <Line type="monotone" dataKey="ScrumPoints" stroke="#12CBC4" activeDot={{ r: 3 }} /> 
-    
+      <Line type="monotone" dataKey="TotalCards" stroke="#5758BB" activeDot={{ r: 3 }} /> 
       {/* Use data key from items */}    
     </LineChart>
     </div>
    );
 }
-export default BurnDown;
+export default TotalCards;

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSuspenseQuery } from 'react-fetching-library';
 import BurnDown from '../BurnDown';
+import TotalCards from '../TotalCards';
 
 export const fetchDonePoints = (dates) => {  //fetch with dates
 
@@ -21,7 +22,7 @@ export const BurnDownContainer = (startDate) => {
   return (
     <div>
       <BurnDown loading={loading} error={error} items={payload} onReload={query}/>  
-   
+      <TotalCards loading={loading} error={error} items={payload} onReload={query}/>
     </div>
    
   );

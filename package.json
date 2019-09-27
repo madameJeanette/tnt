@@ -9,9 +9,9 @@
     "bootstrap-daterangepicker": "^3.0.5",
     "chart.js": "^2.8.0",
     "gh-pages": "^2.1.1",
-    
     "jquery": "^3.4.1",
     "moment": "^2.24.0",
+    "node-sass": "^4.12.0",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "react-bootstrap-daterangepicker": "^4.1.0",
