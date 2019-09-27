@@ -38,9 +38,9 @@ nav {
   color: $colour-highlight1;
   padding: 20px;
 }
-// .navWide {
-//   display: none;
-// }
+.navWide {
+  display: none;
+}
 
 .linkStyle {
   color: $text-color;
@@ -82,15 +82,6 @@ nav {
 }
 ///////////Nav styling ///////////
 
-.burnDown {
-  float: left;
-  color: $text-color; 
-}
-
-.totalCards {
-  float: right;
-  color: $text-color;
- }
 
 
 i {
@@ -223,3 +214,43 @@ i {
 .react-datepicker__current-month{
   color:$text-color !important;
 }
+
+/////////////////componenten
+
+.barChart{
+  float: left;
+  color: $text-color; 
+}
+
+.teamList{
+  float: center;
+  color: $text-color; 
+  background-color: $colour-primary;
+  text-decoration: none;
+  padding: 30px;
+  margin: 20px;
+  box-shadow: 0 4px 13px 0 $colour-highlight2;
+  max-width: 300px;
+  text-align: center;
+  position: relative;
+  left: 1234px;
+  display: block;
+  top:-616px;
+
+}
+
+.burnDown {
+  float: left;
+  color: $text-color; 
+}
+
+.totalCards {
+  float: right;
+  color: $text-color;
+ }
+ 
+ div.content{
+  float: right  !important;
+  color: $text-color !important;
+  background-color: $colour-highlight1 !important;
+ }

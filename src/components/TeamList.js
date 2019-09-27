@@ -7,7 +7,7 @@ const TeamList = ({ items }) => {
       console.log(items)
     // });
     return (
-      <div>
+      <div className="teamList">
         {
           items.map((member) =>
             <h4 key={member.id}>{member.fullName}</h4>
