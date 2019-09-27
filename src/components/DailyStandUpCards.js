@@ -32,7 +32,7 @@ const DailyStandUpCards = ({ loading, error, items, onReload }) => {
     const Carditems = items.map((item) =>
         item.members.map((member) =>
             item.labels.map((label)=>
-                <CardList key={item.id} Header={item.name} MemberId={member.id} Description={member.fullName} LabelId={label.id}Label={label.name} />
+                <CardList key={item.id} Header={item.name} MemberId={member.id} Description={member.fullName} LabelId={label.id} Label={label.name} />
     )))
     
     items.map((item) => {
