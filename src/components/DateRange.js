@@ -12,14 +12,14 @@ Date.prototype.addDays = function(days) {
 export function DateRange() {
 
     const [startDateValue, setStartDate] = useState(new Date());
-    const [endDateValue] = useState(new Date().addDays(14));  //add 14 days as endDate
+     const [endDateValue] = useState(new Date()); 
       const isWeekday = date => {   //filter for only week days
         const day = date.getDay();
         return day !== 0 && day !== 6;
       };
     return (
-      <div style={lineChartStyle}>
-        <DatePicker
+      <div>
+        <DatePicker className="datePicker"
           selected={startDateValue}
           onChange={date => setStartDate(date)}
           selectsStart
@@ -35,9 +35,6 @@ export function DateRange() {
       </div>
     ); 
   }; 
-  const  lineChartStyle = {
-    float: 'right',
-    margin: '10'
-  }
+ 
 
   export default DateRange

@@ -13,7 +13,7 @@ export const requestHostInterceptor = host => client => async action => {
 };
 
 export const Client = createClient({
-  requestInterceptors: [requestHostInterceptor(LOCALHOST)],
+  requestInterceptors: [requestHostInterceptor(HOST)],
 });
 
 

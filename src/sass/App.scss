@@ -1,0 +1,225 @@
+// App.scss
+@import "_colours.scss";
+
+
+.App {
+  text-align: center;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color:$colour-primary;
+  
+}
+
+.App-link {
+  color:  $colour-highlight1;
+}
+body {
+  font-family: sans-serif;
+  text-align: center;
+  background: $colour-primary; 
+  color: $text-color;
+  min-height: 100vh;
+}
+h1 {
+    color: $colour-highlight1;
+}
+h2 {
+  color: $colour-highlight2;
+}
+
+h3, h4, h5, p {
+  color: $text-color;
+}
+hr {
+  color: $colour-highlight1
+}
+///////////Nav styling ///////////
+nav {
+  background-color: $colour-primary;
+  color: $colour-highlight1;
+  padding: 20px;
+}
+// .navWide {
+//   display: none;
+// }
+
+.linkStyle {
+  color: $text-color;
+  text-decoration: none;
+  padding: 10px;
+  &:hover {
+    color:$colour-highlight1;
+  }
+
+}
+
+.linkStyleImg {
+     
+      text-decoration: none;
+      float: left;
+      width: 4.5em;
+      height: auto;
+      
+}
+
+.narrowLinks {
+  display: none;
+}
+
+.narrowLinks a {
+      display: block;
+      float: left;
+      clear: left;
+}
+  
+@media (min-width: 480px) {
+  .navWide {
+      display: block;
+  }
+
+  .navNarrow {
+      display: none;
+  }
+}
+///////////Nav styling ///////////
+
+.burnDown {
+  float: left;
+  color: $text-color; 
+}
+
+.totalCards {
+  float: right;
+  color: $text-color;
+ }
+
+
+i {
+      float: center;
+  }
+
+/////////////Loading styking //////////// 
+.lds-roller {
+  display: inline-block;
+  position: relative;
+  width: 64px;
+  height: 64px;
+}
+.lds-roller div {
+  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transform-origin: 32px 32px;
+}
+.lds-roller div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #fff;
+  margin: -3px 0 0 -3px;
+}
+.lds-roller div:nth-child(1) {
+  animation-delay: -0.036s;
+}
+.lds-roller div:nth-child(1):after {
+  top: 50px;
+  left: 50px;
+}
+.lds-roller div:nth-child(2) {
+  animation-delay: -0.072s;
+}
+.lds-roller div:nth-child(2):after {
+  top: 54px;
+  left: 45px;
+}
+.lds-roller div:nth-child(3) {
+  animation-delay: -0.108s;
+}
+.lds-roller div:nth-child(3):after {
+  top: 57px;
+  left: 39px;
+}
+.lds-roller div:nth-child(4) {
+  animation-delay: -0.144s;
+}
+.lds-roller div:nth-child(4):after {
+  top: 58px;
+  left: 32px;
+}
+.lds-roller div:nth-child(5) {
+  animation-delay: -0.18s;
+}
+.lds-roller div:nth-child(5):after {
+  top: 57px;
+  left: 25px;
+}
+.lds-roller div:nth-child(6) {
+  animation-delay: -0.216s;
+}
+.lds-roller div:nth-child(6):after {
+  top: 54px;
+  left: 19px;
+}
+.lds-roller div:nth-child(7) {
+  animation-delay: -0.252s;
+}
+.lds-roller div:nth-child(7):after {
+  top: 50px;
+  left: 14px;
+}
+.lds-roller div:nth-child(8) {
+  animation-delay: -0.288s;
+}
+.lds-roller div:nth-child(8):after {
+  top: 45px;
+  left: 10px;
+}
+@keyframes lds-roller {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/////////////DatePicker styling //////////// 
+
+.datePicker{
+  background-color: black;
+  border-color: $colour-highlight1;
+  color:$text-color;
+  &:hover {
+    color:$colour-highlight2;
+  }
+}
+.react-datepicker{
+  border: 1px solid #3f3f3f !important;
+  background-color: black !important;
+  color:$text-color !important;
+  &:hover {
+    color:$colour-highlight1 !important;
+  }
+}
+.react-datepicker__header {
+  color:$text-color !important;
+  background-color: black !important;
+  position: relative;
+  &:hover {
+    color:$colour-highlight1 !important;
+  }
+}
+.react-datepicker__day{
+  color:$text-color !important;
+  &:hover {
+    background-color:$colour-highlight1 !important;
+  }
+}
+
+.react-datepicker__month{
+  color:$text-color !important;
+}
+
+.react-datepicker__current-month{
+  color:$text-color !important;
+}
