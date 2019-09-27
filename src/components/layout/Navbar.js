@@ -31,14 +31,9 @@ function Navbar() {
                     <Link to="/Settings" onClick={burgerToggle} className="linkStyle"> Settings </Link>              
                    
                    <hr></hr>
-                </div>
-           
-           
-                
-                </nav>
-        
-
-    )
+                </div>  
+            </nav>
+        )
 }
 
 function burgerToggle() {

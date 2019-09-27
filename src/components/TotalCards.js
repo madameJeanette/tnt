@@ -14,12 +14,13 @@ const TotalCards = ({ items }) => {
     // pass in data from BurnDownContainer
    
   return ( 
-    
+   
       //  linechart build
-    <div className = 'totalCards'>      
-     <LineChart
-      width={800}
-      height={600}
+    <div className = 'totalCards'>  
+     <h1>Total cards added </h1>    
+     <LineChart 
+      width={900}
+      height={700}
       data= {items.items} //pass in data items from burndowncontainer
       margin={{
         top: 20, right: 50, left: 20, bottom: 20,
@@ -29,8 +30,8 @@ const TotalCards = ({ items }) => {
       <XAxis dataKey= 'readableDate' />
       <YAxis />
       <Tooltip />
-      <Legend stroke = 'rgb(255, 255, 255)'/>
-      <Line type="monotone" dataKey="TotalCards" stroke="#ff9ff3" activeDot={{ r: 3 }} /> 
+      <Legend />
+      <Line type="monotone" dataKey="TotalCards" stroke="rgb(241,105,33)" activeDot={{ r: 3 }} /> 
       {/* Use data key from items */}    
     </LineChart>
     </div>
