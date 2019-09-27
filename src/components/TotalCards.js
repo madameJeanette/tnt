@@ -27,8 +27,8 @@ const TotalCards = ({ items }) => {
       }}
     >
       <CartesianGrid strokeDasharray="3 3 " />
-      <XAxis dataKey= 'readableDate' />
-      <YAxis />
+      <XAxis dataKey= 'readableDate' stroke="#f9f9f9" />
+      <YAxis stroke="#f9f9f9"/>
       <Tooltip />
       <Legend />
       <Line type="monotone" dataKey="TotalCards" stroke="rgb(241,105,33)" activeDot={{ r: 3 }} /> 

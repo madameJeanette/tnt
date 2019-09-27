@@ -5,7 +5,6 @@ function Team() {
  
   return (
       <div className="Team"> 
-        <h3>Team page</h3>
         <DateRange />
         
       </div>

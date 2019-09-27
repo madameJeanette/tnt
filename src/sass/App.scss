@@ -4,7 +4,7 @@
 
 .App {
   text-align: center;
-  font-family: sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color:$colour-primary;
   
 }
@@ -33,16 +33,18 @@ nav {
   background-color: $colour-primary;
   color: $colour-highlight1;
   padding: 20px;
- 
 }
-.navWide {
-  display: none;
-}
+// .navWide {
+//   display: none;
+// }
 
 .linkStyle {
   color: $text-color;
   text-decoration: none;
   padding: 10px;
+  &:hover {
+    color:$colour-highlight1;
+  }
 
 }
 
@@ -73,6 +75,7 @@ nav {
   .navNarrow {
       display: none;
   }
+}
 ///////////Nav styling ///////////
 
 .burnDown {
@@ -83,18 +86,11 @@ nav {
 .totalCards {
   float: right;
   color: $text-color;
- 
-}
+ }
 
-.LineChart {
- margin: 20px;
- width:800;
- height:600;
-}
 
 i {
       float: center;
-       
   }
 
 /////////////Loading styking //////////// 
@@ -182,5 +178,40 @@ i {
     transform: rotate(360deg);
   }
 }
+
+/////////////DatePicker styling //////////// 
+
+.datePicker{
+  background-color: black;
+  border-color: $colour-highlight1;
+  color:$text-color;
+  &:hover {
+    color:$colour-highlight2;
+  }
 }
-/////////////Loading styking //////////// 
+.react-datepicker{
+  border: 1px solid #3f3f3f !important;
+  background-color: black !important;
+  color:$text-color !important;
+  &:hover {
+    color:$colour-highlight1 !important;
+  }
+}
+.react-datepicker__header {
+  color:$text-color !important;
+  background-color: black !important;
+  position: relative;
+  &:hover {
+    color:$colour-highlight1 !important;
+  }
+}
+.react-datepicker__day{
+  color:$text-color !important;
+  &:hover {
+    background-color:$colour-highlight1 !important;
+  }
+}
+
+.react-datepicker__month{
+  color:$text-color !important;
+}

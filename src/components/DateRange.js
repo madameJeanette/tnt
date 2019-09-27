@@ -18,8 +18,8 @@ export function DateRange() {
         return day !== 0 && day !== 6;
       };
     return (
-      <div className = "lineChartStyle">
-        <DatePicker
+      <div>
+        <DatePicker className="datePicker"
           selected={startDateValue}
           onChange={date => setStartDate(date)}
           selectsStart
