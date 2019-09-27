@@ -1,15 +1,16 @@
 import React from 'react'
+import {Card} from "semantic-ui-react";
 
 
 const CardList = (props) => {
     return (
-        {/*<Card>
+        <Card>
             <Card.Content
                 header={props.Header}
                 description={props.Description}
                 meta={props.Label}
             />
-        </Card>*/}
+        </Card>
     )
 }
 
