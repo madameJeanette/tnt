@@ -1,0 +1,32 @@
+.App {
+  text-align: center; }
+
+.App-link {
+  color: #21a2dc; }
+
+.lineChartStyle {
+  float: 'right';
+  margin: '10'; }
+
+.navWide {
+  display: none; }
+
+i {
+  float: center; }
+
+.narrowLinks {
+  display: none; }
+
+.narrowLinks a {
+  display: block;
+  float: left;
+  clear: left; }
+
+@media (min-width: 480px) {
+  .navWide {
+    display: block; }
+
+  .navNarrow {
+    display: none; } }
+
+/*# sourceMappingURL=App.css.map */
