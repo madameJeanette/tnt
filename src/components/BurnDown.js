@@ -18,24 +18,23 @@ const BurnDown = ({ items }) => {
   return ( 
     
       //  linechart build
-    <div> 
-       <h3 >Tasks</h3>
-     
+    <div className = 'burnDown'> 
+            
      <LineChart
-      width={1000}
+      width={800}
       height={600}
       data= {items.items} //pass in data items from burndowncontainer
       margin={{
         top: 20, right: 50, left: 20, bottom: 20,
       }}
     >
-      <CartesianGrid strokeDasharray="3 3" />
+      <CartesianGrid strokeDasharray="3 3" stroke='#f9f9f9f9' />
       <XAxis dataKey= 'readableDate' />
       <YAxis />
       <Tooltip />
       <Legend />
-      <Line type="monotone" dataKey="BurnDownPoints" stroke="#ff9ff3" activeDot={{ r: 3 }} />
-      <Line type="monotone" dataKey="ScrumPoints" stroke="#12CBC4" activeDot={{ r: 3 }} /> 
+      <Line type="monotone" dataKey="BurnDownPoints" stroke="rgb(241,105,33)" activeDot={{ r: 3 }} />
+      <Line type="monotone" dataKey="ScrumPoints" stroke="#21a2dc" activeDot={{ r: 3 }} /> 
     
       {/* Use data key from items */}    
     </LineChart>

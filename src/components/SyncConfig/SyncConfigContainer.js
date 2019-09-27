@@ -1,5 +1,5 @@
 import React from 'react'
-import {Action, useMutation, useQuery} from "react-fetching-library";
+import {Action, useMutation, useSuspenseQuery} from "react-fetching-library";
 import {SyncConfigSettings} from "./SyncConfigSettings";
 import {BACKEND_URL} from "../../constants";
 import {SaveSyncConfig} from "./SaveSyncConfig";
@@ -15,7 +15,7 @@ const getSyncConfigAction = {
 };
 
 export const SyncConfigContainer = () => {
-    const { loading, payload, error } = useQuery(getSyncConfigAction);
+    const { loading, payload, error } = useSuspenseQuery(getSyncConfigAction);
 
     if (!payload) {
         const tempPayload = {
@@ -24,8 +24,8 @@ export const SyncConfigContainer = () => {
             boards: []
         };
 
-        return <p>Loading</p>
-        //return <SyncConfigSettings loading={loading} error={error} settings={tempPayload} />
+        //return <p>Loading</p>
+        return <SyncConfigSettings loading={loading} error={error} settings={tempPayload} />
     } else {
         console.log(payload);
 
