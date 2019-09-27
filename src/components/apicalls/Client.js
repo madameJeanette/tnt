@@ -3,6 +3,7 @@ import { createClient } from 'react-fetching-library';
 
 // In real application this const will be stored in ENV's
 const HOST = 'http://trelloextension.eu-west-1.elasticbeanstalk.com/';
+const LOCALHOST = 'http://localhost:8080/';
 
 export const requestHostInterceptor = host => client => async action => {
   return {
@@ -12,7 +13,7 @@ export const requestHostInterceptor = host => client => async action => {
 };
 
 export const Client = createClient({
-  requestInterceptors: [requestHostInterceptor(HOST)],
+  requestInterceptors: [requestHostInterceptor(LOCALHOST)],
 });
 
 
