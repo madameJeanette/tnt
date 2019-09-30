@@ -17,7 +17,7 @@ const TotalCards = ({ items }) => {
    
       //  linechart build
     <div className = 'totalCards'>  
-     <h1>Total cards added </h1>    
+     <h1>Total cards </h1>    
      <LineChart 
       width={900}
       height={700}

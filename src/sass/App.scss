@@ -228,19 +228,18 @@ i {
 
 
 .teamList{
-  float: center;
+  float: left;
   color: $text-color; 
   background-color: $colour-primary;
   text-decoration: none;
   padding: 30px;
   margin: 20px;
   box-shadow: 0 4px 13px 0 $colour-highlight2;
-  max-width: 300px;
+  max-width:100vw;
   text-align: center;
   position: relative;
-  left: 1234px;
   display: block;
-  top:-616px;
+  top:-17px;
 
 }
 
@@ -258,4 +257,15 @@ i {
   float: right  !important;
   color: $text-color !important;
   background-color: $colour-highlight1 !important;
+ }
+
+ .settings{
+   float:center;
+   text-align: center;  
+   justify-self:center;
+ }
+ 
+ .sync-settings input{
+  float:center;  
+  
  }
