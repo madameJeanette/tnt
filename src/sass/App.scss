@@ -26,9 +26,13 @@ h2 {
   color: $colour-highlight2;
 }
 
-h3, h4, h5, p {
+h3, h4, h5{
   color: $text-color;
 }
+p {
+  color: $colour-secondary;
+}
+
 hr {
   color: $colour-highlight1
 }
@@ -88,7 +92,7 @@ i {
       float: center;
   }
 
-/////////////Loading styking //////////// 
+/////////////Loading styling //////////// 
 .lds-roller {
   display: inline-block;
   position: relative;
@@ -177,7 +181,7 @@ i {
 /////////////DatePicker styling //////////// 
 
 .datePicker{
-  background-color: black;
+  background-color:$colour-primary;
   border-color: $colour-highlight1;
   color:$text-color;
   &:hover {
@@ -219,8 +223,9 @@ i {
 
 .barChart{
   float: left;
-  color: $text-color; 
+ 
 }
+
 
 .teamList{
   float: center;
