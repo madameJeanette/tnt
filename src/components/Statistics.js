@@ -38,20 +38,19 @@ const Statistics = ({ loading, error, items, onReload }) => {
 
   
     return (
-        <div>
+        <div className = 'barChart'>
             {/* BarChart is the output for my data from the api */}
-        <BarChart width={600} height={300} data={items}
-                  margin={{top: 5, right: 30, left: 20, bottom: 5}}>
-
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="day" />
-            <YAxis/>
+        <BarChart width={900} height={700} data={items}
+                    margin={{top: 5, right: 30, left: 20, bottom: 5}}>
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis stroke="#f9f9f9" dataKey="day" />
+            <YAxis stroke="#f9f9f9"/>
             <Tooltip/>
             <Legend />
-            <Bar dataKey="toDo" fill="#8884d8" />
-            <Bar dataKey="done" fill="#82ca9d" />
-            <Bar dataKey="review" fill="#82ca9d" />
-            <Bar dataKey="testing" fill="#82ca9d" />
+            <Bar dataKey="toDo" fill="#23a3dd" />
+            <Bar dataKey="testing" fill="#ff9ff3" />
+            <Bar dataKey="review" fill="#F16921" />
+            <Bar dataKey="done" fill="#009432" />
         </BarChart>
 {/*             
             <BarChart width={600} height={300} data={items}

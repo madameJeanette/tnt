@@ -1,81 +1,39 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
-
+import { Link } from "react-router-dom"
 
 function Navbar() {
 
     return (
-        <div className="nav">
-            <div className="navNarrow">
-                <i onClick={burgerToggle} className="fa fa-bars" style={navStyle}/>
-                <div className="narrowLinks">
-                    <Link to="/" style={linkStyle}> Personal </Link>
-                    <Link to="/Team" style={linkStyle}> Team</Link>
-                    <Link to="/DailyStandUp" style={linkStyle}> StandUp </Link>
-                    <Link to="/Leaderboard" style={linkStyle}> Leaderboard </Link>
-                    <Link to="/Settings" style={linkStyle}> Settings </Link>
-                </div>
-            </div>
-
+        
+        <nav>
             <div className="navWide">
-                <div style={navStyle}>
-                   <Link to="/" onClick={burgerToggle} ><img src="Logo.jpg" style={linkStyleImg}  /></Link>
-                    <Link to="/" onClick={burgerToggle} style={linkStyle}> Personal </Link>
+               
+                    <Link to="/" ><i className="fa fa-teqplay" style={{ color: "#F16921", fontSize: 128 }} /></Link>
+                    <Link to="/" className="linkStyle"> Personal </Link>
                     |
-                    <Link to="/Team" onClick={burgerToggle} style={linkStyle}> Team </Link>
+                    <Link to="/Team" className="linkStyle"> Team </Link>
                     |
-                    <Link to="/DailyStandUp" onClick={burgerToggle} style={linkStyle}> StandUp </Link>
+                    <Link to="/DailyStandUp" className="linkStyle"> StandUp </Link>
                     |
-                    <Link to="/Leaderboard" onClick={burgerToggle} style={linkStyle}> Leaderboard </Link>
+                    <Link to="/Leaderboard" className="linkStyle"> Leaderboard </Link>
                     |
-                    <Link to="/Settings" onClick={burgerToggle} style={linkStyle}> Settings </Link>
+                    <Link to="/Settings" className="linkStyle"> Settings </Link>              
+                   
+                   <hr></hr>
                 </div>
-                <div className="blueRect" style={BlueRect}>
 
-                </div>
-            </div>
-        </div>
-
-
+                <div className="navNarrow">
+                  <i className="fa fa-teqplay"/>
+                  <div className="narrowLinks">
+                    <Link to="/Personal" className="linkStyle"> Personal </Link>
+                    <Link to="/Team" className="linkStyle"> Team</Link>
+                    <Link to="/DailyStandUp" className="linkStyle"> StandUp </Link>
+                    <Link to="/Leaderboard" className="linkStyle"> Leaderboard </Link>
+                    <Link to="/Settings" className="linkStyle"> Settings </Link>
+                  </div>
+                 </div>  
+        </nav>
     )
-}
-
-function burgerToggle() {
-    let linksEl = document.querySelector('.narrowLinks');
-    if (linksEl.style.display === 'block') {
-        linksEl.style.display = 'none';   //toggle the drop-down based on its current CSS display value
-    } else {
-        linksEl.style.display = 'block';
-    }
-}
-
-const BlueRect = {
-    height: '50px',
-    width: '100%',
-    backgroundColor: '#21A2DC'
-}
-
-const navStyle = {
-    backgroundColor: '#f9f9f9',
-    color: '#6f7982',
-    padding: '20px',
-    boxShadow: '0 2px 2px 0 rgba(0, 0, 0, 0.2)',
-
-}
-
-const linkStyle = {
-    color: '#6f7982',
-    textDecoration: 'none',
-    textAlign: 'center',
-    padding: '10px'
-
-}
-
-const linkStyleImg = {
-    
-    color: '#6f7982',
-    textDecoration: 'none',
-    float: 'left'
 }
 
 

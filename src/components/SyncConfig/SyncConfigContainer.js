@@ -1,58 +1,48 @@
 import React from 'react'
-import {Action, useMutation, useQuery} from "react-fetching-library";
-import {SyncConfigSettings} from "./SyncConfigSettings";
-import {BACKEND_URL} from "../../constants";
+import {useMutation, useSuspenseQuery} from "react-fetching-library";
 import {SaveSyncConfig} from "./SaveSyncConfig";
-
 
 const getSyncConfigAction = {
     method: "GET",
-    endpoint: BACKEND_URL + "/config/getSyncInfo",
+    endpoint: "config/getSyncInfo",
     headers:
         {"Authorization": "Basic " + btoa("test:test")}
-
-
 };
 
-export const SyncConfigContainer = () => {
-    const { loading, payload, error } = useQuery(getSyncConfigAction);
+const saveSyncConfigAction = (formValues) => ({
+    method: 'PUT',
+    endpoint: "config/saveSyncInfo",
+    body: formValues,
+    headers:
+        {"Authorization": "Basic " + btoa("test:test")}
+});
 
-    if (!payload) {
+export const SyncConfigContainer = () => {
+    const getQuery = useSuspenseQuery(getSyncConfigAction);
+    const saveMutation = useMutation(saveSyncConfigAction);
+
+    const handleSubmit = async (formValues) => {
+        const { error: mutateError } = await saveMutation.mutate(formValues);
+
+        if (mutateError) {
+            console.error(mutateError)
+        }
+        console.log(saveMutation.payload)
+    };
+
+    if (!getQuery.payload) {
         const tempPayload = {
             key: "",
             token: "",
             boards: []
         };
 
-        return <p>Loading</p>
-        //return <SyncConfigSettings loading={loading} error={error} settings={tempPayload} />
+        //return <p>Loading</p>
+        return <SaveSyncConfig loading={getQuery.loading} error={getQuery.error} settings={tempPayload} onSubmit={handleSubmit} />
     } else {
-        console.log(payload);
+        console.log(getQuery.payload);
 
-        return <SyncConfigSettings loading={loading} error={error} settings={payload} />
+        return <SaveSyncConfig loading={getQuery.loading} error={getQuery.error} settings={getQuery.payload} onSubmit={handleSubmit} />
     }
-};
-
-const saveSyncConfigAction = (formValues) => ({
-    method: 'PUT',
-    endpoint: BACKEND_URL + "/config/saveSync",
-    body: formValues
-});
-
-export const SaveSyncConfigContainer = () => {
-    const { loading, payload, mutate, error, reset, abort } = useMutation(saveSyncConfigAction);
-
-    const handleSubmit = async (formValues) => {
-        const { error: mutateError } = await mutate(formValues);
-
-        if (mutateError) {
-            //show ie. notification
-            console.error(error)
-        }
-        console.log("Saved")
-        //success
-    };
-
-    return <SaveSyncConfig loading={loading} error={error} onSubmit={handleSubmit}/>
 };
 
