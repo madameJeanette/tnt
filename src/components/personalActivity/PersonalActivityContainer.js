@@ -17,7 +17,7 @@ export const fetchMemberActivity = () => {
 export const PersonalActivityContainer = () => {
 
   const { loading, payload, error, query} = useSuspenseQuery(fetchMemberActivity()); 
-    console.log(payload)
+    //console.log(payload)
   return (
     <div>
       <PersonalActivity loading={loading} error={error} items={payload} onReload={query}/>  

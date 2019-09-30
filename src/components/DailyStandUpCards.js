@@ -1,5 +1,6 @@
 import React from 'react'
 import { Card, Icon } from 'semantic-ui-react'
+import _ from 'lodash'
 
 
 const CardList = (props) => {
@@ -35,11 +36,12 @@ const DailyStandUpCards = ({ loading, error, items, onReload }) => {
                 <CardList key={item.id} Header={item.name} MemberId={member.id} Description={member.fullName} LabelId={label.id} Label={label.name} />
     )))
     
-    items.map((item) => {
-        item.members.map((member) => console.log(member))
+    // items.map((item) => 
+    //     item.members.map((member) =>
+    //         _.labels.join((label, '~') =>
+    //         console.log([item.id, item.name, member.id, member.fullName, label.id, label.name])
         
-        //console.log(item.member)
-    })
+    //     )))
     
     console.log(items)
     return(
