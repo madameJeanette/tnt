@@ -238,7 +238,6 @@ i {
   max-width:100vw;
   text-align: center;
   position: relative;
-  // left: 1234px;
   display: block;
   top:-17px;
 
@@ -258,4 +257,15 @@ i {
   float: right  !important;
   color: $text-color !important;
   background-color: $colour-highlight1 !important;
+ }
+
+ .settings{
+   float:center;
+   text-align: center;  
+   justify-self:center;
+ }
+ 
+ .sync-settings input{
+  float:center;  
+  
  }
