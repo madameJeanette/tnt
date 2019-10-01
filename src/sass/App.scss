@@ -56,24 +56,22 @@ nav {
 
 }
 
-.linkStyleImg {
-     
-      text-decoration: none;
-      float: left;
-      width: 4.5em;
-      height: auto;
-      
-}
-
 .narrowLinks {
   display: none;
 }
 
 .narrowLinks a {
-      display: block;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between; 
+      // display: block;
       float: left;
       clear: left;
 }
+.block.bounce {
+  transition: font-size 0.3s cubic-bezier(0.41, 0.01, 0.33, 1.71);
+}
+
   
 @media (min-width: 480px) {
   .navWide {
@@ -84,13 +82,7 @@ nav {
       display: none;
   }
 }
-///////////Nav styling ///////////
 
-
-
-i {
-      float: center;
-  }
 
 /////////////Loading styling //////////// 
 .lds-roller {
@@ -226,7 +218,6 @@ i {
  
 }
 
-
 .teamList{
   float: left;
   color: $text-color; 
@@ -242,17 +233,30 @@ i {
   top:-17px;
 
 }
-
-.burnDown {
-  float: left;
+////////////////////////Team Page Graphs
+.burnDownOne {
+  display: flex;
+  flex-direction: column;
   color: $text-color; 
+  width: 48vw;
+  height: 48vh
+}
+.burnDownTwo {
+  display: flex;
+  flex-direction: column;
+  color: $text-color;
+  width: 48vw;
+  // height: 48vh
+
+}
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; 
+  
 }
 
-.totalCards {
-  float: right;
-  color: $text-color;
- }
- 
+ ////////////// Date Picker
  div.content{
   float: right  !important;
   color: $text-color !important;
