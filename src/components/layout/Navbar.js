@@ -26,7 +26,7 @@ function Navbar() {
                 margin: "20px"
               }}
             >
-              <i className="fa fa-teqplay" />
+              <i className="fa fa-teqplay fa-spin" />
             </div>
                   
             </Link>
@@ -45,7 +45,11 @@ function Navbar() {
     
 
           <div className="navNarrow">
-            {/* <i className="fa fa-teqplay"/> */}
+            <i className="fa fa-teqplay"  style={{
+                fontSize: 10,
+                color: TEQPLAY_BLUE,
+                margin: "5px"
+              }}/>
             <div className="narrowLinks">
               <Link to="/Personal" className="linkStyle"> Personal </Link>
               <Link to="/Team" className="linkStyle"> Team</Link>
