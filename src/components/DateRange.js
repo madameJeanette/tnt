@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import DatePicker from "react-datepicker";
 import BurnDownContainer from './burnDown/BurnDownContainer'; 
 import "react-datepicker/dist/react-datepicker.css";
-import { BurnDownContainerTeamTwo } from "./burnDown/BurnDownContainerTeamTwo";
+
 
 
 
@@ -48,6 +48,7 @@ export function DateRange() {
       
         return day == 1;
       };
+    const endDate = realStartSprint.addDays(14)
     return (
       <div>
         <DatePicker className="datePicker"
@@ -55,20 +56,22 @@ export function DateRange() {
           onChange={date => setStartDate(date)}
           selectsStart
           startDate={startDateValue}
-          endDate={realStartSprint.addDays(14)}
+          endDate={endDate}
           filterDate={isTuesday}
           placeholderText="Select a Tuesday"
         
         />
         <div className = 'flex-container'>
           <BurnDownContainer 
-            endDate={realStartSprint.addDays(14)}
+            endDate={endDate}
             startDate={startDateValue}
+            boardId="qDAFPals"
           />
 
-          <BurnDownContainerTeamTwo 
-            endDate={realStartSprint.addDays(14)}
+          <BurnDownContainer 
+            endDate={endDate}
             startDate={startDateValue}
+            boardId="xfg9qoms"
           />
         </div>
       </div>

@@ -56,24 +56,22 @@ nav {
 
 }
 
-.linkStyleImg {
-     
-      text-decoration: none;
-      float: left;
-      width: 4.5em;
-      height: auto;
-      
-}
-
 .narrowLinks {
   display: none;
 }
 
 .narrowLinks a {
-      display: block;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between; 
+      // display: block;
       float: left;
       clear: left;
 }
+.block.bounce {
+  transition: font-size 0.3s cubic-bezier(0.41, 0.01, 0.33, 1.71);
+}
+
   
 @media (min-width: 480px) {
   .navWide {
@@ -84,10 +82,7 @@ nav {
       display: none;
   }
 }
-///////////Nav styling ///////////
-i {
-      float: center;
-  }
+
 
 /////////////Loading styling //////////// 
 .lds-roller {
@@ -244,12 +239,14 @@ i {
   flex-direction: column;
   color: $text-color; 
   width: 48vw;
+  height: 48vh
 }
 .burnDownTwo {
   display: flex;
   flex-direction: column;
   color: $text-color;
   width: 48vw;
+  // height: 48vh
 
 }
 .flex-container {

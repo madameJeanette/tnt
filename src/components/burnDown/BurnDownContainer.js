@@ -3,21 +3,20 @@ import { useSuspenseQuery } from 'react-fetching-library';
 import BurnDown from '../BurnDown';
 import TotalCards from '../TotalCards';
 
-export const fetchDonePoints = (dates) => {  //fetch with dates
-
+export const fetchDonePoints = (data) => {  //fetch with dates
+  console.log(data.boardId)
   return {
     method: 'GET',
-    endpoint: 'board/qDAFPals/burndownchartinfo/?startDate=' +    //get startDate from dates
-    dates.startDate.toISOString().split('T', 1)[0] +      //set to ISO and split time
+    endpoint: 'board/' + data.boardId + '/burndownchartinfo/?startDate=' +    //get startDate from dates
+    data.startDate.toISOString().split('T', 1)[0] +      //set to ISO and split time
           '&endDate=' + 
-          dates.endDate.toISOString().split('T', 1)[0],    //get endDate from dates
+          data.endDate.toISOString().split('T', 1)[0],    //get endDate from dates
     headers: {"Authorization": "Basic " + btoa("test:test")}
   }
 }
 
-export const BurnDownContainer = (startDate) => {
-
-  const { loading, payload, error, query} = useSuspenseQuery(fetchDonePoints(startDate)); 
+export const BurnDownContainer = (data) => {
+  const { loading, payload, error, query} = useSuspenseQuery(fetchDonePoints(data)); 
 
   return (
   <div className = 'burnDownOne'>
