@@ -7,7 +7,7 @@ export const fetchDonePoints = (dates) => {  //fetch with dates
 
   return {
     method: 'GET',
-    endpoint: 'board/qDAFPals/burndownchartinfo/?startDate=' +    //get startDate from dates
+    endpoint: 'board/xfg9qoms/burndownchartinfo/?startDate=' +    //get startDate from dates
     dates.startDate.toISOString().split('T', 1)[0] +      //set to ISO and split time
           '&endDate=' + 
           dates.endDate.toISOString().split('T', 1)[0],    //get endDate from dates
@@ -15,20 +15,19 @@ export const fetchDonePoints = (dates) => {  //fetch with dates
   }
 }
 
-export const BurnDownContainer = (startDate) => {
+export const BurnDownContainerTeamTwo = (startDate) => {
 
   const { loading, payload, error, query} = useSuspenseQuery(fetchDonePoints(startDate)); 
 
   return (
-  <div className = 'burnDownOne'>
-    <BurnDown loading={loading} error={error} items={payload} onReload={query}/>  
-    <TotalCards  loading={loading} error={error} items={payload} onReload={query}/>
-  </div>
-   
+    <div className = 'burnDownTwo'>
+      <BurnDown loading={loading} error={error} items={payload} onReload={query}/>  
+      <TotalCards  loading={loading} error={error} items={payload} onReload={query}/>   
+   </div>
   );
 };
 
-export default BurnDownContainer;
+export default BurnDownContainerTeamTwo;
 
 
 //query data and send to BurnDown

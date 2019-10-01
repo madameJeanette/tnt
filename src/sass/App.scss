@@ -85,9 +85,6 @@ nav {
   }
 }
 ///////////Nav styling ///////////
-
-
-
 i {
       float: center;
   }
@@ -226,7 +223,6 @@ i {
  
 }
 
-
 .teamList{
   float: left;
   color: $text-color; 
@@ -242,17 +238,28 @@ i {
   top:-17px;
 
 }
-
-.burnDown {
-  float: left;
+////////////////////////Team Page Graphs
+.burnDownOne {
+  display: flex;
+  flex-direction: column;
   color: $text-color; 
+  width: 48vw;
+}
+.burnDownTwo {
+  display: flex;
+  flex-direction: column;
+  color: $text-color;
+  width: 48vw;
+
+}
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; 
+  
 }
 
-.totalCards {
-  float: right;
-  color: $text-color;
- }
- 
+ ////////////// Date Picker
  div.content{
   float: right  !important;
   color: $text-color !important;
