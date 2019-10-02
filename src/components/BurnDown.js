@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
+  LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer
 } from 'recharts';
 
 const BurnDown = ({ items }) => {
@@ -18,11 +18,10 @@ const BurnDown = ({ items }) => {
   return ( 
     
       //  linechart build
-    <div className = 'burnDown'> 
+    <div> 
           <h1>Total items done </h1>    
+    <ResponsiveContainer width= '100%' height= {725}>
      <LineChart 
-      width={900}
-      height={700}
       data= {items.items} //pass in data items from burndowncontainer
       margin={{
         top: 20, right: 50, left: 20, bottom: 20,
@@ -37,6 +36,7 @@ const BurnDown = ({ items }) => {
       <Line type="monotone" dataKey="ScrumPoints" stroke="#21a2dc" activeDot={{ r: 3 }} /> 
       {/* Use data key from items */}    
     </LineChart>
+    </ResponsiveContainer>
     </div>
    );
 }
