@@ -1,12 +1,12 @@
 //Fetch daily Cards that are new
 
-
+var credentials = localStorage.getItem("uname") + ":" + localStorage.getItem("pw")
 
 export const fetchDailyCards = {
     method: 'GET',
     endpoint: '/board/qDAFPals/newCards',
     headers: 
-    {"Authorization": "Basic " + btoa("test:test")},
+    {"Authorization": "Basic " + btoa(credentials)},
     // parameters:
     // {
     //     "key": "62f0297bf821e374ae28a1fbab5ef9fb",
