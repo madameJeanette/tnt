@@ -30,7 +30,7 @@ const TotalCards = ({ items }) => {
       <YAxis stroke="#f9f9f9"/>
       <Tooltip />
       <Legend />
-      <Line type="monotone" dataKey="TotalCards" stroke="#F16921" activeDot={{ r: 3 }} /> 
+      <Line type="monotone" dataKey="TotalCards" stroke="#ff9ff3" activeDot={{ r: 3 }} /> 
       {/* Use data key from items */}    
     </LineChart>
     </ResponsiveContainer>

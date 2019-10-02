@@ -32,7 +32,7 @@ const BurnDown = ({ items }) => {
       <YAxis stroke="#f9f9f9"/>
       <Tooltip />
       <Legend />
-      <Line type="monotone" dataKey="BurnDownPoints" stroke="#ff9ff3" activeDot={{ r: 3 }} />
+      <Line type="monotone" dataKey="BurnDownPoints" stroke="#F16921" activeDot={{ r: 3 }} />
       <Line type="monotone" dataKey="ScrumPoints" stroke="#21a2dc" activeDot={{ r: 3 }} /> 
       {/* Use data key from items */}    
     </LineChart>
