@@ -2,10 +2,10 @@ import React from 'react'
 
 const TeamList = ({ items }) => {
 
-    // items.items.forEach(item => {
-    //  item.
-    // console.log(items)
-    // });
+    
+    
+    //console.log(items)
+    
     return (
       <div className="teamList">
         {
