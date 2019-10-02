@@ -33,7 +33,7 @@ export function DateRange() {
       };
     const endDate = realStartSprint.addDays(14)
     return (
-      <div>
+      <div>    
         <DatePicker className="datePicker"
           selected={startDateValue}
           onChange={date => setStartDate(date)}
@@ -45,16 +45,19 @@ export function DateRange() {
         
         />
         <div className = 'flex-container'>
-          <BurnDownContainer 
-            endDate={endDate}
-            startDate={startDateValue}
-            boardId="qDAFPals"
-          />
 
           <BurnDownContainer 
             endDate={endDate}
             startDate={startDateValue}
+            boardId="qDAFPals"
+            teamName = "Nauti and Nice"
+          />
+         
+          <BurnDownContainer 
+            endDate={endDate}
+            startDate={startDateValue}
             boardId="xfg9qoms"
+            teamName = "Unsinkables"
           />
         </div>
       </div>
