@@ -32,18 +32,17 @@ const DailyStandUpCards = ({ loading, error, items, onReload }) => {
     // })
     const Carditems = items.map((item) =>
         item.members.map((member) =>
-            item.labels.map((label)=>
-                <CardList key={item.id} Header={item.name} MemberId={member.id} Description={member.fullName} LabelId={label.id} Label={label.name} />
+            item.labels.map((label) =>
+                <CardList key={item.id} Header={item.name} MemberId={member.id} Description={member.fullName} LabelId={label.id} Label={label.name}/>
     )))
     
-    // items.map((item) => 
-    //     item.members.map((member) =>
-    //         _.labels.join((label, '~') =>
-    //         console.log([item.id, item.name, member.id, member.fullName, label.id, label.name])
-        
-    //     )))
     
-    console.log(items)
+    const x = items.map((item) =>
+        item.labels.filter((v, i) => item.labels.indexOf(v) === i))
+    
+    console.log(x)
+    
+    //console.log(items)
     return(
         <div>
            {Carditems}

@@ -9,7 +9,7 @@ export const fetchDailyStandUp = {
     method: 'GET',
     endpoint: 'board/qDAFPals/teamstatistics/?today=' + today,
     headers: 
-    {"Authorization": "Basic " + btoa("test:test")},
+    {"Authorization": "Basic " + btoa("user:test")},
     // parameters:
     // {
     //     "key": "62f0297bf821e374ae28a1fbab5ef9fb",

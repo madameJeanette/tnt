@@ -16,12 +16,12 @@ const Statistics = ({ loading, error, items, onReload }) => {
     // totalTesting: 25
 
     items.forEach(item => {
-        console.log(
-        item.day = new Date(item.date).toUTCString().split('2019', 1)[0],
-        item.toDo = item.totalDoing,
-        item.done = item.totalDone,
-        item.review = item.totalReviewing,
-        item.testing = item.totalTesting)
+
+        item.day = new Date(item.date).toUTCString().split('2019', 1)[0]
+        item.toDo = item.totalDoing
+        item.done = item.totalDone
+        item.review = item.totalReviewing
+        item.testing = item.totalTesting
     });
     
     const data = [
@@ -34,7 +34,6 @@ const Statistics = ({ loading, error, items, onReload }) => {
     var dateYesterday = items[0].date
 
     var today = dateToday
-        console.log(items)
 
   
     return (
