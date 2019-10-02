@@ -3,11 +3,8 @@ import Card from "../components/Card";
 
 function Personal() {
     return (
-      <div className="Personal">
-       
+      <div className="Personal"> 
          <Card />
-
-             
       </div>
     );
   
