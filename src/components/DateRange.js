@@ -24,25 +24,8 @@ function calculateCurrentSprintStart(today, startSprint) {
 export function DateRange() {
     var startSprint = new Date("2019/09/24");//eertste sprint
     var realStartSprint = calculateCurrentSprintStart(new Date(), startSprint);
-    /*var currentDay = new Date().toUTCString().split('T', 1)[0]; //vandaag
-    var nextSprint = new Date().toUTCString().split('T', 1)[0]; //addWeeks(new Date(startSprint), 2); //start sprint 2
-    console.log(startSprint);
-    console.log(currentDay);
-    // console.log(TwoWeeksFromNow);
-    console.log(nextSprint);
-  
-    if(currentDay > nextSprint){  //als datum van vandaag gelijk is aan datum volgende sprint
-      console.log("Ik werk woohoo!");
-      startSprint = currentDay; // startSprint word datum van vandaag
-      var TwoWeeksFromNow = addWeeks(new Date(currentDay), 2);
-      console.log(TwoWeeksFromNow);  //vandaag over twee weken
-      nextSprint = TwoWeeksFromNow; //tel twee weken bij nextSprint op
-      console.log(startSprint);
-      console.log(nextSprint);
-   }*/
 
     const [startDateValue, setStartDate] = useState(realStartSprint);
-    //  const [endDateValue, setEndDate] = useState(new Date().addDays(14)); 
       const isTuesday = date => {   //filter for only week days
         const day = date.getDay();
       
