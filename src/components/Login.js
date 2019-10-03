@@ -1,39 +1,26 @@
 import React, { useState } from 'react';
-import { Button, Form, Grid, Header, Image, Message, Segment } from 'semantic-ui-react'
-import {useMutation} from "react-fetching-library";
-import { check } from "../App"
-import { Redirect } from "react-router-dom"
-
-//api request ->
-const loginAction = (username, password) => {
-  return {
-    method: 'GET',
-    endpoint: "login?username=" + username +  "&password=" + password 
-  
-    //GET password and username     
-    //Return true or false
-   
-  }
-}
+import { Button, Form, Grid, Header, Segment } from 'semantic-ui-react'
 
 export const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  
-  const loginMutation = useMutation(loginAction);
 
-  const handleSubmit = async () => {
-    const { error: mutateError } = await loginMutation.mutate(username, password);
 
-    if (mutateError) {
-        console.error(mutateError)
-        return
+  async function doLogin () {
+    try {
+
+      localStorage.setItem("uname", username)
+      localStorage.setItem("pw", password)
+
+      window.location.href = window.location.origin
     }
-    localStorage.setItem("uname", username)
-    localStorage.setItem("pw", password)
-  };
+    catch (err) {
+      console.error(err)
+    }
+  }
 
   return(
+
     <Grid textAlign='center' style={{ height: '100vh' }} verticalAlign='middle'>
       <Grid.Column style={{ maxWidth: 450 }}>
         <Header as='h2' color='blue' textAlign='center'>
@@ -64,7 +51,7 @@ export const Login = () => {
  
             />
   
-            <Button color='orange' fluid size='large' onClick={handleSubmit} href="../" >
+            <Button color='orange' fluid size='large' onClick={doLogin} href="../" >
               Login
             </Button>
           </Segment>

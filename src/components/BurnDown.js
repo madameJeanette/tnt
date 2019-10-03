@@ -3,7 +3,7 @@ import {
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer
 } from 'recharts';
 
-const BurnDown = ({ items }) => {
+const BurnDown = ({ items, teamName }) => {
   
   items.items.forEach(item => {
     
@@ -19,8 +19,9 @@ const BurnDown = ({ items }) => {
     
       //  linechart build
     <div> 
-          <h1>Total items done </h1>    
-    <ResponsiveContainer width= '100%' height= {725}>
+      <h1>{teamName}</h1>
+
+    <ResponsiveContainer width= '100%' height= {750}>
      <LineChart 
       data= {items.items} //pass in data items from burndowncontainer
       margin={{
