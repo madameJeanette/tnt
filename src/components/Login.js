@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Form, Grid, Header, Segment } from 'semantic-ui-react'
+import { Button, Form, Grid, Header, Segment, Message } from 'semantic-ui-react'
 
 export const Login = () => {
   const [username, setUsername] = useState("");
@@ -22,21 +22,23 @@ export const Login = () => {
   return(
 
     <Grid textAlign='center' style={{ height: '100vh' }} verticalAlign='middle'>
-      <Grid.Column style={{ maxWidth: 450 }}>
+      <Grid.Column style={{ maxWidth: 450}}>
         <Header as='h2' color='blue' textAlign='center'>
-          <i className="fa fa-teqplay" /> Log-in to your account
+          <i className="fa fa-teqplay" /> 
+          Log-in to your account
         </Header>
-        <Form size='large'  >
-          <Segment stacked>
+        <Form inverted size='large' >
+          <Segment inverted stacked >
             <Form.Input 
+
              fluid icon='user'
              iconPosition='left'
              placeholder='Username'
              id="uname"
              value={username}
              onChange={event => {setUsername(event.target.value)}}
-           
             />
+            
             <Form.Input
               
               fluid
@@ -47,10 +49,8 @@ export const Login = () => {
               id='pw'
               value={password}
               onChange={event => {setPassword(event.target.value)}}
-             
- 
+              
             />
-  
             <Button color='orange' fluid size='large' onClick={doLogin} href="../" >
               Login
             </Button>

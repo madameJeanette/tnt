@@ -10,8 +10,8 @@ import Leaderboard from "./pages/Leaderboard";
 import Team from "./pages/Team";
 import DailyStandUp from './pages/DailyStandUp'
 import Settings from "./pages/Settings";
-import useLocalStorage from 'react-use-localstorage';
 import LoginPage from './pages/LoginPage';
+import { Message } from 'semantic-ui-react';
   //added fetching-library client to root.
 
 var loggedIn = ''
@@ -24,10 +24,11 @@ var loggedIn = ''
     // check if stored data has a value if no data or data null return false 
     if(storedName != null && storedName !== "" && storedPw != null && storedPw !== "") {
       loggedIn = true
- 
+     alert("Succes!");
       return loggedIn
     }else {
-   
+      alert("No name or password provided");
+     
       return false
     
     }
