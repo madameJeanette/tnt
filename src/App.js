@@ -19,7 +19,7 @@ import LoginPage from './pages/LoginPage';
     var storedName = localStorage.getItem('uname');
     var storedPw = localStorage.getItem('pw');
   
-    // check if stored data has a value if no data or data null return true or false 
+    // check if stored data has a value if no data or data null return false 
     if(storedName != null && storedName !== "" && storedPw != null && storedPw !== "") {
       return true
     }else {
@@ -29,15 +29,19 @@ import LoginPage from './pages/LoginPage';
 
   function CheckIfLoggedIn(loggedIn) { //if check() = loggedIn >returns true
     if (loggedIn) {
+  
+      console.log("true")
       return <Navbar/>   //geef de navbar weer
     } else {
+    
+      console.log("false")
       return <Redirect to="/Login"/>  //if false redirect naar Login pagina
     }
   }
 
   function App() {
     const loggedIn = check()   //execute login check wile opening page
-
+    console.log("check")
 
     return (
       <ClientContextProvider client={Client}> 
