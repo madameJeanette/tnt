@@ -14,35 +14,38 @@ import useLocalStorage from 'react-use-localstorage';
 import LoginPage from './pages/LoginPage';
   //added fetching-library client to root.
 
+var loggedIn = ''
+
   export function check() {  
     // get stored data from the localStorage 
     var storedName = localStorage.getItem('uname');
     var storedPw = localStorage.getItem('pw');
-  
+   
     // check if stored data has a value if no data or data null return false 
     if(storedName != null && storedName !== "" && storedPw != null && storedPw !== "") {
-      return true
+      loggedIn = true
+ 
+      return loggedIn
     }else {
+   
       return false
+    
     }
   }
 
   function CheckIfLoggedIn(loggedIn) { //if check() = loggedIn >returns true
     if (loggedIn) {
   
-      console.log("true")
       return <Navbar/>   //geef de navbar weer
     } else {
-    
-      console.log("false")
+  
       return <Redirect to="/Login"/>  //if false redirect naar Login pagina
     }
   }
 
   function App() {
-    const loggedIn = check()   //execute login check wile opening page
-    console.log("check")
-
+   check()             //execute login check wile opening page
+                        
     return (
       <ClientContextProvider client={Client}> 
        <Suspense fallback={ <div><i className="fa fa-teqplay fa-spin"/></div>}>
