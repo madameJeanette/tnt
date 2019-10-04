@@ -22,11 +22,13 @@ const CardWithPersonalActivity = (props) => {
     return (
         <Card>
             <Card.Content
+               
                 header={props.Header}
                  description={props.data.card.name}
                  //meta={props.date}
             />
-            <Card.Content extra>
+            <Card.Content extra
+             className="accordionContent">
                 {members}
                 {listsBefore}<br />
                 {listsAfter}
@@ -43,7 +45,7 @@ const PersonalActivity = ({ items }) => {
     //console.log(item.id,item.type,item.data,item.data.card)
     console.log(items)
     return (
-    <div>
+    <div className="personalActivity">
             {CardWithPersonalActivityItems}
     </div>
     )
