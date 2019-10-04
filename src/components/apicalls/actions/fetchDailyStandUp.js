@@ -5,9 +5,9 @@ var day = new Date()
 var today = day.toISOString().split('T', 1)[0]
 var credentials = localStorage.getItem("uname") + ":" + localStorage.getItem("pw")
 
-export const fetchDailyStandUp = {
+export const fetchDailyStandUp = (props) = {
     method: 'GET',
-    endpoint: 'board/qDAFPals/teamstatistics/?today=' + today,
+    endpoint: 'board/'+props.boardId+'/teamstatistics/?today=' + today,
     headers: 
     {"Authorization": "Basic " + btoa(credentials)},
     // parameters:

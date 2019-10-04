@@ -6,14 +6,6 @@ import {BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recha
 const Statistics = ({ loading, error, items, onReload }) => {
 
 
-    // information what i got from the API,
-    // boardId: "qDAFPals"
-    // date: 1568937600000
-    // today: 1568937600000
-    // totalDoing: 58
-    // totalDone: 45
-    // totalReviewing: 14
-    // totalTesting: 25
 
     items.forEach(item => {
 
