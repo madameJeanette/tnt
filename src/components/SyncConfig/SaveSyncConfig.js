@@ -21,16 +21,15 @@ export const SaveSyncConfig = ({settings, loading, error, onSubmit}) => {
     }
 
     return (
-        <div className="sync-settings">
+        <div>
             {loading &&
             <p>Loading Data</p>
             }
             {error &&
             <p>ERROR!</p>
             }
-            <form>
-                <h2>Sync Settings</h2>
-                <div>
+            <form >
+                <div className = 'settingsStyle'>
                     <div>
                         <label htmlFor="key">Trello Key</label>
                         <input type="text" id="key" name="key" value={key} onChange={event => setKey(event.target.value)} />
@@ -43,7 +42,7 @@ export const SaveSyncConfig = ({settings, loading, error, onSubmit}) => {
                         <div key={index} className="sync-settings-board">
                             <label htmlFor={"id-"+index}>Board ID</label>
                             <input type="text" className="form-control" id={"id-"+index} name={"id"} value={value.id} onChange={event => changeBoardItem(event, index)} />
-                        </div>
+                    </div>
                     ))}
                 </div>
                 <button onClick={e => {
