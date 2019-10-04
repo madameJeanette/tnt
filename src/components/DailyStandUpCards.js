@@ -39,7 +39,7 @@ const DailyStandUpCards = ({ loading, error, items, onReload }) => {
     )
 
     return(
-        <div>
+        <div className="cardItems">
            {Carditems}
         </div>
     )

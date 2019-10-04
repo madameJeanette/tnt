@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { Accordion, Icon } from 'semantic-ui-react'
+import { Accordion, Icon, Container } from 'semantic-ui-react'
 import PersonalActivityContainer from '../components/personalActivity/PersonalActivityContainer'
 
 const AccordionItem = (props) => {
@@ -14,24 +14,24 @@ console.log(titleProps)
   }
   const {activeIndex} = state
 console.log(activeIndex)
-  return(
-  <Accordion>
+  return (
+    <Container className="accordionContainer">
+  <Accordion fluid>
       <Accordion.Title
         active={activeIndex === 0}
           index={0}
           onClick={handleClick}
         >
-          <Icon name='dropdown' />
-          {props.name} {props.id}
+          <h4 className="titleAccordion"><Icon name='dropdown' />
+         {props.name}</h4>
+          
         </Accordion.Title>
-      <Accordion.Content active={activeIndex === 0}
+      <Accordion.Content className="accordionContent" active={activeIndex === 0}
       >
-        <PersonalActivityContainer id={props.id}/>
-        <p>
-          hallo
-       </p>
+        <Container><PersonalActivityContainer id={props.id}/></Container>
         </Accordion.Content>
-    </Accordion>
+      </Accordion>
+      </Container>
   )}
 
 const TeamList = ({ items }) => {

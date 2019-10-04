@@ -5,30 +5,36 @@
 .App {
   text-align: center;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color:$colour-primary;
-  
+  color: $colour-primary;
+
 }
 
 .App-link {
-  color:  $colour-highlight1;
+  color: $colour-highlight1;
 }
+
 body {
   font-family: sans-serif;
   text-align: center;
-  background: $colour-primary; 
+  background: $colour-primary;
   color: $text-color;
   min-height: 100vh;
 }
+
 h1 {
-    color: $colour-highlight1;
+  color: $colour-highlight1;
 }
+
 h2 {
   color: $colour-highlight2;
 }
 
-h3, h4, h5{
+h3,
+h4,
+h5 {
   color: $text-color;
 }
+
 p {
   color: $colour-secondary;
 }
@@ -36,12 +42,14 @@ p {
 hr {
   color: $colour-highlight1
 }
+
 ///////////Nav styling ///////////
 nav {
   background-color: $colour-primary;
   color: $colour-highlight1;
   padding: 20px;
 }
+
 .navWide {
   display: none;
 }
@@ -50,8 +58,9 @@ nav {
   color: $text-color;
   text-decoration: none;
   padding: 10px;
+
   &:hover {
-    color:$colour-highlight1;
+    color: $colour-highlight1;
   }
 
 }
@@ -61,86 +70,117 @@ nav {
 }
 
 .narrowLinks a {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between; 
-      // display: block;
-      float: left;
-      clear: left;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  // display: block;
+  float: left;
+  clear: left;
 }
 
-  
+
 @media (min-width: 480px) {
   .navWide {
-      display: block;
+    display: block;
   }
 
   .navNarrow {
-      display: none;
+    display: none;
   }
 }
 
 /////////////DatePicker styling //////////// 
 
-.datePicker{
-  background-color:$colour-primary;
+.datePicker {
+  background-color: $colour-primary;
   border-color: $colour-highlight1;
-  color:$text-color;
+  color: $text-color;
+
   &:hover {
-    color:$colour-highlight2;
+    color: $colour-highlight2;
   }
 }
-.react-datepicker{
+
+.react-datepicker {
   border: 1px solid #3f3f3f !important;
   background-color: black !important;
-  color:$text-color !important;
+  color: $text-color !important;
+
   &:hover {
-    color:$colour-highlight1 !important;
+    color: $colour-highlight1 !important;
   }
 }
+
 .react-datepicker__header {
-  color:$text-color !important;
+  color: $text-color !important;
   background-color: black !important;
   position: relative;
+
   &:hover {
-    color:$colour-highlight1 !important;
-  }
-}
-.react-datepicker__day{
-  color:$text-color !important;
-  &:hover {
-    background-color:$colour-highlight1 !important;
+    color: $colour-highlight1 !important;
   }
 }
 
-.react-datepicker__month{
-  color:$text-color !important;
+.react-datepicker__day {
+  color: $text-color !important;
+
+  &:hover {
+    background-color: $colour-highlight1 !important;
+  }
 }
 
-.react-datepicker__current-month{
-  color:$text-color !important;
+.react-datepicker__month {
+  color: $text-color !important;
+}
+
+.react-datepicker__current-month {
+  color: $text-color !important;
 }
 
 /////////////////componenten
 
-.barChart{
+.barChart {
   float: left;
- 
 }
 
-.teamList{
-  float: left;
-  color: $text-color; 
-  background-color: $colour-primary;
-  text-decoration: none;
-  padding: 30px;
-  margin: 20px;
-  box-shadow: 0 4px 13px 0 $colour-highlight2;
-  max-width:100vw;
-  text-align: center;
-  position: relative;
+.teamList {
   display: block;
-  top:-17px;
+  float: left;
+}
+
+.personalActivity {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.cardItems {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.accordionContent {
+  float: none !important;
+  color: $colour-primary !important;
 
 }
 
@@ -152,13 +192,20 @@ nav {
   color:  $text-color;
 }
 
+.accordionContainer {
+  align-content: center;
+}
+
+.titleAccordion {
+  color: $colour-highlight1;
+}
 
 ////////////////////////Team Page 
 
 .burnDownOne {
   display: flex;
   flex-direction: column;
-  color: $text-color; 
+  color: $text-color;
   width: 48vw;
   height: 48vh;
 }
@@ -166,15 +213,25 @@ nav {
 .flex-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between; 
-  
+  justify-content: space-between;
 
 }
 
- ////////////// Date Picker
- div.content{
-  float: right  !important;
+////////////// Date Picker
+.datePicker {
+  float: right !important;
   color: $text-color !important;
   background-color: $colour-highlight1 !important;
  }
+
+.settings {
+  float: center;
+  text-align: center;
+  justify-self: center;
+}
+
+.sync-settings input {
+  float: center;
+
+}
 
