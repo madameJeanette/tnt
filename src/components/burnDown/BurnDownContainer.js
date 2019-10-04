@@ -20,8 +20,8 @@ export const BurnDownContainer = (data) => {
 
   return (
   <div className = 'burnDownOne'>
-    <BurnDown loading={loading} error={error} items={payload} onReload={query}/>  
-    <TotalCards  loading={loading} error={error} items={payload} onReload={query}/>
+    <BurnDown loading={loading} error={error} items={payload} onReload={query} teamName={data.teamName}/>  
+    <TotalCards  loading={loading} error={error} items={payload} onReload={query}  />
   </div>
    
   );

@@ -8,7 +8,7 @@ const LOCALHOST = 'http://localhost:8080/';
 export const requestHostInterceptor = host => client => async action => {
   return {
     ...action,
-    endpoint: `${host}${action.endpoint}`,
+    endpoint: `${host}${action.endpoint}`
   };
 };
 

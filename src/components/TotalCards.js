@@ -16,8 +16,7 @@ const TotalCards = ({ items }) => {
   return ( 
    
       //  linechart build
-    <div>  
-     <h1>Total cards </h1>    
+    <div>   
    <ResponsiveContainer width= "100%" height= {725}>
      <LineChart 
       data= {items.items} //pass in data items from burndowncontainer
