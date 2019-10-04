@@ -2,9 +2,9 @@
 
 var credentials = localStorage.getItem("uname") + ":" + localStorage.getItem("pw")
 
-export const fetchDailyCards = {
+export const fetchDailyCards = (props) = {
     method: 'GET',
-    endpoint: '/board/qDAFPals/newCards',
+    endpoint: '/board/'+props.id+'/newCards',
     headers: 
     {"Authorization": "Basic " + btoa(credentials)},
     // parameters:

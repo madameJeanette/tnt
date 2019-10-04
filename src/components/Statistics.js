@@ -6,22 +6,14 @@ import {BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recha
 const Statistics = ({ loading, error, items, onReload }) => {
 
 
-    // information what i got from the API,
-    // boardId: "qDAFPals"
-    // date: 1568937600000
-    // today: 1568937600000
-    // totalDoing: 58
-    // totalDone: 45
-    // totalReviewing: 14
-    // totalTesting: 25
 
     items.forEach(item => {
-        console.log(
-        item.day = new Date(item.date).toUTCString().split('2019', 1)[0],
-        item.toDo = item.totalDoing,
-        item.done = item.totalDone,
-        item.review = item.totalReviewing,
-        item.testing = item.totalTesting)
+
+        item.day = new Date(item.date).toUTCString().split('2019', 1)[0]
+        item.toDo = item.totalDoing
+        item.done = item.totalDone
+        item.review = item.totalReviewing
+        item.testing = item.totalTesting
     });
     
     const data = [
@@ -34,7 +26,6 @@ const Statistics = ({ loading, error, items, onReload }) => {
     var dateYesterday = items[0].date
 
     var today = dateToday
-        console.log(items)
 
   
     return (
