@@ -31,7 +31,7 @@ const Statistics = ({ loading, error, items, onReload }) => {
     return (
         <div className = 'barChart'>
             {/* BarChart is the output for my data from the api */}
-        <BarChart width={900} height={700} data={items}
+        <BarChart width={450} height={350} data={items}
                     margin={{top: 5, right: 30, left: 20, bottom: 5}}>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis stroke="#f9f9f9" dataKey="day" />
