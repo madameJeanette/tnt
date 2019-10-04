@@ -224,10 +224,20 @@ nav {
   background-color: $colour-highlight1 !important;
  }
 
+ 
+
+
 .settings {
   float: center;
   text-align: center;
   justify-self: center;
+}
+.settingsStyle {
+  display: flex;
+  width: 30%;
+  text-align: center;
+  justify-content: center;
+  color:  $text-color;
 }
 
 .sync-settings input {
