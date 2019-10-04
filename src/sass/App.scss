@@ -143,6 +143,16 @@ nav {
   top:-17px;
 
 }
+
+.settingsStyle {
+  display: flex;
+  width: 30%;
+  text-align: center;
+  justify-content: center;
+  color:  $text-color;
+}
+
+
 ////////////////////////Team Page 
 
 .burnDownOne {
@@ -168,26 +178,3 @@ nav {
   background-color: $colour-highlight1 !important;
  }
 
- .settings{
-   float:center;
-   text-align: center;  
-   justify-self:center;
- }
- 
- .sync-settings input{
-  float:center;  
-  
- }
-
- ////////Login/////
-
-//  form {
-//    background-color: $colour-primary;
-//    p h4 h3 h2 h1 {
-//      color: $text-color;
-//    }
-//    button {
-//      color:$text-color;
-//      background-color:$colour-highlight1;
-//    }
-//  }
