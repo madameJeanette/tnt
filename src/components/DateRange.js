@@ -33,7 +33,7 @@ export function DateRange() {
       };
     const endDate = realStartSprint.addDays(14)
     return (
-      <div>    
+      <div className="datePickerContent ">    
         <DatePicker className="datePicker"
           selected={startDateValue}
           onChange={date => setStartDate(date)}
