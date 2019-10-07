@@ -31,8 +31,7 @@ h2 {
 
 h3,
 h4,
-h5,
-span {
+h5 {
   color: $text-color;
 }
 
@@ -142,6 +141,7 @@ nav {
 
 .barChart {
   float: left;
+  color: $text-color;
 }
 
 .teamList {
