@@ -185,6 +185,14 @@ nav {
 
 }
 
+.settingsStyle {
+  display: flex;
+  width: 30%;
+  text-align: center;
+  justify-content: center;
+  color:  $text-color;
+}
+
 .accordionContainer {
   align-content: center;
 }
@@ -214,7 +222,10 @@ nav {
 .datePicker {
   float: right !important;
   color: $text-color !important;
+ // background-color: $colour-highlight1 !important;
  }
+
+ 
 
 
 .settings {
@@ -224,9 +235,12 @@ nav {
 }
 .settingsStyle {
   display: flex;
-  width: 30%;
+  width: 400px;
   text-align: center;
   justify-content: center;
+  margin-right:auto;
+  margin-left:auto;
+  padding: 10px;
   color:  $text-color;
 }
 
