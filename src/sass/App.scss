@@ -235,9 +235,12 @@ nav {
 }
 .settingsStyle {
   display: flex;
-  width: 30%;
+  width: 400px;
   text-align: center;
   justify-content: center;
+  margin-right:auto;
+  margin-left:auto;
+  padding: 10px;
   color:  $text-color;
 }
 
