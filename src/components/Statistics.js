@@ -36,7 +36,7 @@ const Statistics = ({ loading, error, items, onReload }) => {
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis stroke="#f9f9f9" dataKey="day" />
             <YAxis stroke="#f9f9f9"/>
-            <Tooltip/>
+            <Tooltip />
             <Legend />
             <Bar dataKey="toDo" fill="#23a3dd" />
             <Bar dataKey="testing" fill="#ff9ff3" />
