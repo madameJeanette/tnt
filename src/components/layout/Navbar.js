@@ -7,7 +7,7 @@ function Navbar() {
   return (
           <nav>
             <div className="navWide">
-            <Link to="/" >
+            <Link to="/Team" >
               <div
                 style={{
                   fontSize: 45,
@@ -19,8 +19,8 @@ function Navbar() {
               </div>
                   
             </Link>
-            <Link to="/" className="linkStyle"> Personal </Link>
-            |
+            {/* <Link to="/" className="linkStyle"> Personal </Link> */}
+            {/* | */}
             <Link to="/Team" className="linkStyle"> Team </Link>
             |
             <Link to="/DailyStandUp" className="linkStyle"> StandUp </Link>
@@ -32,7 +32,7 @@ function Navbar() {
             <hr></hr>
           </div>
     
-
+{/* 
           <div className="navNarrow">
             <i className="fa fa-teqplay"  style={{
                 fontSize: 10,
@@ -46,7 +46,7 @@ function Navbar() {
               <Link to="/Leaderboard" className="linkStyle"> Leaderboard </Link>
               <Link to="/Settings" className="linkStyle"> Settings </Link>
             </div>
-          </div>  
+          </div>   */}
         </nav>
     )
 }

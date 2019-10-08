@@ -57,7 +57,7 @@ var loggedIn = ''
               {CheckIfLoggedIn(loggedIn)}
               {loggedIn &&
                 <div>
-                  <Route exact path="/" component={Home}/>
+                  <Route exact path="/Team" component={Home}/>
                   <Route path="/Leaderboard" component={Leaderboard}/>
                   <Route path="/Team" component={Team}/>
                   <Route path="/DailyStandUp" component={DailyStandUp}/>
