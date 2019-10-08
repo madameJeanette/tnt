@@ -5,8 +5,9 @@ const CardWithPersonalActivity = (props) => {
     var members = ""
     var listsBefore = ""
     var listsAfter = ""
+    var cardName = ""
     
-    // console.log(props.data)
+    console.log("v1.0")
 
     if (props.Header === "addMemberToCard") {
         members += props.data.member.id
@@ -17,10 +18,13 @@ const CardWithPersonalActivity = (props) => {
             listsAfter += "List After: " + props.data.listAfter.name
         } 
     }
-    if (props.Header === "updateList") {
+    if (props.Header === "updateList" || "createList") {
         if (props.data) {
-            var listUpdate = "empty"   
+            cardName = "empty"   
        }
+    }
+    if (props.cards) {
+        cardName = props.data.card.name
     }
 
     return (
@@ -28,7 +32,7 @@ const CardWithPersonalActivity = (props) => {
             <Card.Content
                
                 header={props.Header}
-                description={listUpdate || props.data.card.name}
+                description={cardName}
                  //meta={props.date}
             />
             <Card.Content extra
