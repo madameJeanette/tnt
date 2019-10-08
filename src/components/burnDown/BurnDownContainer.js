@@ -16,6 +16,7 @@ export const fetchDonePoints = (data) => {  //fetch with dates
 }
 
 export const BurnDownContainer = (data) => {
+  console.log(fetchDonePoints(data));
   const { loading, payload, error, query} = useSuspenseQuery(fetchDonePoints(data));
 
   return (

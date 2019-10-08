@@ -103,7 +103,7 @@ nav {
 
 .react-datepicker {
   border: 1px solid #3f3f3f !important;
-  background-color: black !important;
+  background-color: $colour-primary-light !important;
   color: $text-color !important;
 
   &:hover {
@@ -113,7 +113,7 @@ nav {
 
 .react-datepicker__header {
   color: $text-color !important;
-  background-color: black !important;
+  background-color: $colour-primary-light !important;
   position: relative;
 
   &:hover {
@@ -127,6 +127,12 @@ nav {
   &:hover {
     background-color: $colour-highlight1 !important;
   }
+  .react-datepicker__selecting-range {
+    background-color: $colour-highlight1 !important;
+  }
+}
+.react-datepicker__day-name {
+  color: $text-color !important;
 }
 
 .react-datepicker__month {
