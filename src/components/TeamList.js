@@ -9,11 +9,11 @@ const AccordionItem = (props) => {
     const { index } = titleProps
     const {activeIndex} = state
     const newIndex = activeIndex === index ? 1 : index
-console.log(titleProps)
+
      setState({ activeIndex: newIndex })
   }
   const {activeIndex} = state
-console.log(activeIndex)
+
   return (
     <Container className="accordionContainer">
   <Accordion fluid>

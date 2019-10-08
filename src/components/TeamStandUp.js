@@ -17,7 +17,7 @@ export default function TeamStandUp({ boardId, boardName }) {
             <div> 
                <h1>{boardName} </h1>
             </div>
-            <Container>
+            <Container fluid>
             <DailyStandUpContainer boardId={boardId} />
             <DailyCardContainer boardId={boardId} />
             </Container>
