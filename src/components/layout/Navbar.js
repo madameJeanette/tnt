@@ -19,14 +19,14 @@ function Navbar() {
               </div>
                   
             </Link>
-            {/* <Link to="/" className="linkStyle"> Personal </Link> */}
-            {/* | */}
+            {/* <Link to="/" className="linkStyle"> Personal </Link>
+             |  */}
             <Link to="/Team" className="linkStyle"> Team </Link>
             |
             <Link to="/DailyStandUp" className="linkStyle"> StandUp </Link>
             |
-            <Link to="/Leaderboard" className="linkStyle"> Leaderboard </Link>
-            |
+            {/* <Link to="/Leaderboard" className="linkStyle"> Leaderboard </Link>
+            | */}
             <Link to="/Settings" className="linkStyle"> Settings </Link>              
                   
             <hr></hr>
