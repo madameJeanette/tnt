@@ -4,7 +4,7 @@ import Card from "../components/Card";
 function Personal() {
     return (
       <div className="Personal"> 
-         {/* <Card /> */}
+         <Card />
       </div>
     );
   
