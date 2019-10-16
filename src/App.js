@@ -24,7 +24,7 @@ var loggedIn = ''
     // check if stored data has a value if no data or data null return false 
     if(storedName != null && storedName !== "" && storedPw != null && storedPw !== "") {
       loggedIn = true
-     alert("Succes!");
+    
       return loggedIn
     }else {
       alert("No name or password provided");

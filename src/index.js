@@ -8,6 +8,7 @@ import fontawesome from "@fortawesome/fontawesome-free";
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faTeqplay } from "./faTeqPlay";
 
+
 const client = createClient({
 });
 
