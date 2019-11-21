@@ -19,6 +19,8 @@ function calculateCurrentSprintStart(today, startSprint) {
 }
 
 export function DateRange() {
+    const [highestTick, setHighestTick] = useState(0);
+  
     const startSprint = new Date(Date.UTC(2019, 8, 23, 0, 0, 0)); //eertste sprint
     const today = new Date();
     const realStartSprint = calculateCurrentSprintStart(today, startSprint);
@@ -49,6 +51,8 @@ export function DateRange() {
                     startDate={startDateValue}
                     boardId="qDAFPals"
                     teamName="Nauti and Nice"
+                    highestHomeTick={highestTick}
+                    setTick={setHighestTick}
                 />
 
                 <BurnDownContainer
@@ -56,6 +60,8 @@ export function DateRange() {
                     startDate={startDateValue}
                     boardId="xfg9qoms"
                     teamName="Unsinkables"
+                    highestHomeTick={highestTick}
+                    setTick={setHighestTick}
                 />
             </div>
         </div>

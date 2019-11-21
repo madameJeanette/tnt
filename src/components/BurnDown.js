@@ -3,18 +3,42 @@ import {
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer
 } from 'recharts';
 
-const BurnDown = ({ items, teamName }) => {
-  
+const BurnDown = ({ items, teamName,  highestHomeTick, setTick }) => {
+  if (items.items != null) {
+  var ticks = [];
+  let highestTicks = 0;
+
   items.items.forEach(item => {
     
     item.ScrumPoints = item.totalDonePoint;
     item.BurnDownPoints = item.totalPoint - item.totalDonePoint;
     item.readableDate = new Date(item.date).toUTCString().split('2019', 1)[0];
     
-  });
-  
-    // pass in data from BurnDownContainer
+    const burndownpoints = item.BurnDownPoints
+      if (highestTicks < burndownpoints) {
+        highestTicks = burndownpoints;
+         }  
+    if (highestHomeTick < highestTicks) {
+      setTick(highestTicks);
+    }
    
+    let latestAddedTick = 0;
+
+    // //Set the ticks array with steps of 50
+    while (highestHomeTick > latestAddedTick) {
+        ticks.push(latestAddedTick);
+        latestAddedTick += 50;
+    }
+});
+   
+  }  else {
+    return (<div className="lds-facebook">
+      <div></div>
+      <div></div>
+      <div></div>
+      </div>);
+  }
+  
   return ( 
     
       //  linechart build
@@ -30,7 +54,7 @@ const BurnDown = ({ items, teamName }) => {
     >
       <CartesianGrid strokeDasharray="3 3" />
       <XAxis dataKey= 'readableDate' stroke="#f9f9f9" />
-      <YAxis stroke="#f9f9f9"/>
+      <YAxis stroke="#f9f9f9" ticks={ticks} />
       <Tooltip />
       <Legend />
       <Line type="monotone" dataKey="BurnDownPoints" stroke="#F16921" activeDot={{ r: 3 }} />
