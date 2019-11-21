@@ -21,7 +21,7 @@ export const BurnDownContainer = (data) => {
   return (
   <div className = 'burnDownOne'>
     <BurnDown loading={loading} error={error} items={payload} onReload={query} teamName={data.teamName} highestHomeTick={data.highestHomeTick} setTick={data.setTick}/>  
-    <TotalCards  loading={loading} error={error} items={payload} onReload={query}  />
+    <TotalCards  loading={loading} error={error} items={payload} onReload={query} highestTickTC={data.highestTickTC} setTickTC={data.setTickTC} />
   </div>
    
   );
